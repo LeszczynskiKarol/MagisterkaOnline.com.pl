@@ -1,0 +1,211 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
+import Card from '../components/Card.astro';
+
+const features = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>`,
+    title: "Krok po kroku",
+    description: "Kompletny przewodnik od wyboru tematu, przez pisanie, aż po obronę pracy magisterskiej.",
+    href: "/poradnik-pisania"
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>`,
+    title: "Metodologia",
+    description: "Wybór właściwej metodologii badawczej, narzędzia analityczne i praktyczne wskazówki.",
+    href: "/poradnik-pisania/metodologia"
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>`,
+    title: "Bibliografia",
+    description: "Wszystko o cytowaniu źródeł, stylach bibliograficznych i unikaniu plagiatu.",
+    href: "/poradnik-pisania/bibliografia"
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+    </svg>`,
+    title: "AI w Pisaniu",
+    description: "Jak etycznie i skutecznie wykorzystać sztuczną inteligencję w pracy naukowej.",
+    href: "/ai-w-pisaniu-prac-mgr"
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+    </svg>`,
+    title: "Formatowanie",
+    description: "Normy edytorskie, szablony dokumentów i profesjonalne formatowanie pracy.",
+    href: "/poradnik-pisania/formatowanie"
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+    </svg>`,
+    title: "Obrona",
+    description: "Przygotowanie do obrony, typowe pytania komisji i radzenie sobie ze stresem.",
+    href: "/poradnik-pisania/obrona"
+  }
+];
+
+const aiFeatures = [
+  {
+    title: "ChatGPT dla Studentów",
+    description: "Praktyczne zastosowania ChatGPT w pisaniu pracy - od burzy mózgów po korektę tekstu."
+  },
+  {
+    title: "Etyka AI",
+    description: "Granice etycznego wykorzystania AI, plagiatu i odpowiedzialności akademickiej."
+  },
+  {
+    title: "Najlepsze Narzędzia",
+    description: "Przegląd i porównanie narzędzi AI wspierających proces pisania pracy naukowej."
+  }
+];
+---
+
+<Layout 
+  title="Strona Główna"
+  description="Kompleksowy przewodnik po pisaniu pracy magisterskiej. Od wyboru tematu, przez metodologię i bibliografię, aż po obronę. Praktyczne wskazówki i narzędzia AI."
+>
+  <Hero
+    title="Twoja Droga do Świetnej Pracy Magisterskiej"
+    subtitle="Kompleksowy przewodnik, który przeprowadzi Cię przez cały proces pisania pracy - od pomysłu do obrony"
+    ctaText="Rozpocznij Poradnik"
+    ctaHref="/poradnik-pisania"
+    secondaryCtaText="Dowiedz się o AI"
+    secondaryCtaHref="/ai-w-pisaniu-prac-mgr"
+  />
+
+  <Section
+    title="Co Znajdziesz w Poradniku?"
+    subtitle="Wszystko, czego potrzebujesz, aby napisać profesjonalną pracę magisterską"
+    centered
+    background="white"
+  >
+    <FeatureGrid features={features} columns={3} />
+  </Section>
+
+  <Section
+    title="AI w Służbie Twojej Pracy"
+    subtitle="Dowiedz się, jak etycznie i skutecznie wykorzystać sztuczną inteligencję w procesie pisania"
+    centered
+    background="gray"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {aiFeatures.map((feature) => (
+        <Card variant="elevated">
+          <h3 class="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
+          <p class="text-gray-600 text-sm">{feature.description}</p>
+        </Card>
+      ))}
+    </div>
+    <div class="text-center mt-10">
+      <a href="/ai-w-pisaniu-prac-mgr" class="btn-primary">
+        Odkryj AI w Pisaniu Prac
+      </a>
+    </div>
+  </Section>
+
+  <Section
+    title="Dlaczego MagisterkaOnline?"
+    background="gradient"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div>
+        <div class="space-y-6">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-600 text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">Praktyczne Podejście</h3>
+              <p class="text-gray-600">Konkretne wskazówki i przykłady, które możesz od razu zastosować w swojej pracy.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-600 text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">Aktualna Wiedza</h3>
+              <p class="text-gray-600">Najnowsze trendy, w tym wykorzystanie AI w pisaniu prac naukowych.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-600 text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">Krok po Kroku</h3>
+              <p class="text-gray-600">Strukturyzowany przewodnik, który nie pozostawi Cię samego na żadnym etapie.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary-600 text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-1">Za Darmo</h3>
+              <p class="text-gray-600">Cała wiedza dostępna bezpłatnie dla wszystkich polskich studentów.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="aspect-w-4 aspect-h-3 bg-gradient-to-br from-primary-500 to-accent-600 rounded-2xl shadow-2xl p-8 flex items-center justify-center">
+          <div class="text-center text-white">
+            <div class="text-6xl font-bold mb-2">1000+</div>
+            <div class="text-xl">Studentów Pomogliśmy</div>
+            <div class="mt-8 text-4xl font-bold mb-2">95%</div>
+            <div class="text-xl">Wskaźnik Sukcesu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section
+    title="Gotowy Zacząć?"
+    subtitle="Dołącz do tysięcy studentów, którzy już skorzystali z naszego poradnika"
+    centered
+    background="white"
+  >
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="/poradnik-pisania" class="btn-primary text-lg px-8 py-4">
+        Przejdź do Poradnika
+        <svg class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+  </Section>
+</Layout>

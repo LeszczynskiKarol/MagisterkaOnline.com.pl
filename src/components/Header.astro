@@ -1,0 +1,99 @@
+---
+const navItems = [
+  { href: '/', label: 'Start' },
+  { href: '/poradnik-pisania', label: 'Poradnik Pisania' },
+  { href: '/ai-w-pisaniu-prac-mgr', label: 'AI w Pisaniu Prac' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+  <nav class="container-custom">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3 group">
+        <div class="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-lg font-bold text-gray-900 leading-tight group-hover:text-primary-600 transition-colors">
+            MagisterkaOnline
+          </span>
+          <span class="text-xs text-gray-500">Twoja droga do sukcesu</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              currentPath === item.href || currentPath.startsWith(item.href + '/')
+                ? 'bg-primary-50 text-primary-700'
+                : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA Button -->
+      <div class="hidden md:block">
+        <a href="/poradnik-pisania" class="btn-primary">
+          Rozpocznij
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        type="button"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+        id="mobile-menu-button"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="hidden md:hidden pb-4" id="mobile-menu">
+      <div class="flex flex-col space-y-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+              currentPath === item.href || currentPath.startsWith(item.href + '/')
+                ? 'bg-primary-50 text-primary-700'
+                : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+            }`}
+          >
+            {item.label}
+          </a>
+        ))}
+        <a href="/poradnik-pisania" class="btn-primary mt-2">
+          Rozpocznij
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

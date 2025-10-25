@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+
+const guides = [
+  {
+    title: "Jak Zacząć Pisać Pracę",
+    description: "Pierwszy krok to zawsze najtrudniejszy. Dowiedz się, jak skutecznie rozpocząć pracę nad magisterką i pokonać blok pisarski.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+    </svg>`,
+    href: "/poradnik-pisania/jak-zaczac"
+  },
+  {
+    title: "Wybór Tematu Pracy",
+    description: "Jak wybrać temat, który będzie interesujący, realny do zrealizowania i doceniony przez promotora.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>`,
+    href: "/poradnik-pisania/wybor-tematu"
+  },
+  {
+    title: "Struktura Pracy Magisterskiej",
+    description: "Poznaj standardową strukturę pracy: od strony tytułowej, przez rozdziały, aż po bibliografię.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+    </svg>`,
+    href: "/poradnik-pisania/struktura"
+  },
+  {
+    title: "Problem Badawczy i Hipotezy",
+    description: "Jak sformułować problem badawczy, pytania badawcze i hipotezy, które będą kierować Twoją pracą.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`,
+    href: "/poradnik-pisania/problem-badawczy"
+  },
+  {
+    title: "Metodologia Badań",
+    description: "Metody jakościowe, ilościowe, mieszane - jak wybrać właściwą metodologię dla swojej pracy.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>`,
+    href: "/poradnik-pisania/metodologia"
+  },
+  {
+    title: "Przegląd Literatury",
+    description: "Jak skutecznie wyszukiwać źródła, czytać literaturę naukową i tworzyć syntetyczny przegląd.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>`,
+    href: "/poradnik-pisania/przeglad-literatury"
+  },
+  {
+    title: "Bibliografia i Cytowania",
+    description: "Style cytowania (APA, Chicago, Harvard), unikanie plagiatu i tworzenie profesjonalnej bibliografii.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+    </svg>`,
+    href: "/poradnik-pisania/bibliografia"
+  },
+  {
+    title: "Formatowanie Pracy",
+    description: "Normy edytorskie, marginesy, czcionki, numeracja stron i profesjonalne formatowanie dokumentu.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+    </svg>`,
+    href: "/poradnik-pisania/formatowanie"
+  },
+  {
+    title: "Redakcja i Korekta",
+    description: "Jak skutecznie edytować własną pracę, na co zwracać uwagę i jak unikać najczęstszych błędów.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`,
+    href: "/poradnik-pisania/redakcja"
+  },
+  {
+    title: "Przygotowanie do Obrony",
+    description: "Jak przygotować prezentację, co mówić na obronie i jak radzić sobie z pytaniami komisji.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+    </svg>`,
+    href: "/poradnik-pisania/obrona"
+  },
+  {
+    title: "Harmonogram Pisania",
+    description: "Jak stworzyć realny harmonogram, zarządzać czasem i dotrzymać deadline'ów.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+    </svg>`,
+    href: "/poradnik-pisania/harmonogram"
+  },
+  {
+    title: "Współpraca z Promotorem",
+    description: "Jak budować dobrą relację z promotorem i skutecznie wykorzystać jego wsparcie.",
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+    </svg>`,
+    href: "/poradnik-pisania/promotor"
+  }
+];
+
+const categories = [
+  {
+    title: "🎯 Początek",
+    guides: guides.slice(0, 2)
+  },
+  {
+    title: "📋 Planowanie",
+    guides: guides.slice(2, 5)
+  },
+  {
+    title: "✍️ Pisanie",
+    guides: guides.slice(5, 8)
+  },
+  {
+    title: "🎓 Finalizacja",
+    guides: guides.slice(8, 12)
+  }
+];
+---
+
+<Layout 
+  title="Poradnik Pisania Pracy Magisterskiej"
+  description="Kompletny poradnik pisania pracy magisterskiej krok po kroku. Od wyboru tematu, przez metodologię i bibliografię, aż po obronę pracy."
+>
+  <Hero
+    title="Poradnik Pisania Pracy Magisterskiej"
+    subtitle="Kompleksowy przewodnik, który przeprowadzi Cię przez każdy etap pisania pracy - od pomysłu do obrony"
+  />
+
+  <Section
+    title="Twoja Droga do Sukcesu"
+    subtitle="Dowiedz się wszystkiego, co musisz wiedzieć o pisaniu pracy magisterskiej"
+    background="white"
+  >
+    <div class="mb-16">
+      <div class="bg-primary-50 border-l-4 border-primary-600 p-6 rounded-r-lg">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-6 w-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h3 class="text-lg font-medium text-primary-900">
+              Rozpocznij od Początku lub Przeskocz do Interesującej Sekcji
+            </h3>
+            <p class="mt-2 text-primary-800">
+              Poradnik jest podzielony na logiczne sekcje, które możesz czytać w dowolnej kolejności. Jeśli jesteś na konkretnym etapie pisania, przejdź bezpośrednio do odpowiedniego przewodnika.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {categories.map((category) => (
+      <div class="mb-16 last:mb-0">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">{category.title}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {category.guides.map((guide) => (
+            <a href={guide.href} class="group card hover:shadow-lg transition-all duration-200 border-2 border-transparent hover:border-primary-500">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-100 text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                    <Fragment set:html={guide.icon} />
+                  </div>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed mb-3">
+                    {guide.description}
+                  </p>
+                  <div class="flex items-center text-primary-600 font-medium text-sm">
+                    Czytaj dalej
+                    <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </Section>
+
+  <Section
+    title="Potrzebujesz Pomocy z AI?"
+    subtitle="Dowiedz się, jak etycznie wykorzystać sztuczną inteligencję w procesie pisania pracy"
+    centered
+    background="gradient"
+  >
+    <div class="max-w-3xl mx-auto">
+      <Card variant="elevated">
+        <div class="text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-100 text-accent-600 mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">AI w Pisaniu Prac Magisterskich</h3>
+          <p class="text-gray-600 mb-6">
+            ChatGPT, Gemini i inne narzędzia AI mogą być potężnym wsparciem w pisaniu pracy. Dowiedz się, jak je wykorzystać etycznie i skutecznie.
+          </p>
+          <a href="/ai-w-pisaniu-prac-mgr" class="btn-primary inline-flex items-center">
+            Odkryj AI w Pisaniu
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </Card>
+    </div>
+  </Section>
+</Layout>
