@@ -1,0 +1,320 @@
+---
+import Layout from './Layout.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate?: string;
+  readingTime?: string;
+}
+
+const { 
+  title, 
+  description,
+  publishDate = new Date().toLocaleDateString('pl-PL', { year: 'numeric', month: 'long', day: 'numeric' }),
+  readingTime = '10 min'
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <!-- Article Header -->
+  <div class="bg-gradient-to-br from-primary-50 via-white to-accent-50 border-b border-gray-200">
+    <div class="container-custom py-12 lg:py-16">
+      <div class="max-w-6xl mx-auto">
+        <!-- Breadcrumbs -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center space-x-2 text-sm text-gray-600">
+            <li>
+              <a href="/" class="hover:text-primary-600 transition-colors">Start</a>
+            </li>
+            <li>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </li>
+            <li>
+              <a href="/poradnik-pisania" class="hover:text-primary-600 transition-colors">Poradnik Pisania</a>
+            </li>
+            <li>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </li>
+            <li class="text-gray-900 font-medium">
+              {title}
+            </li>
+          </ol>
+        </nav>
+
+        <!-- Title -->
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+          {title}
+        </h1>
+
+        <!-- Meta -->
+        <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            {publishDate}
+          </div>
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {readingTime} czytania
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Content -->
+  <div class="container-custom py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      <!-- Main Content -->
+      <article class="lg:col-span-8">
+        <div class="prose prose-lg prose-primary max-w-3xl article-content">
+          <slot />
+        </div>
+
+        <!-- Share Section -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <ShareButtons 
+            title={title} 
+            description={description}
+          />
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <div class="flex flex-col sm:flex-row justify-between gap-4">
+            <a href="/poradnik-pisania" class="btn-secondary">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              Wszystkie Poradniki
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4">
+        <div class="sticky top-24 space-y-6">
+          <!-- Quick Info Card -->
+          <div class="card bg-primary-50 border-2 border-primary-100">
+            <div class="flex items-start space-x-3 mb-4">
+              <div class="flex-shrink-0">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-2">Przydatna wskazówka</h3>
+                <p class="text-sm text-gray-700 leading-relaxed">
+                  Zapisz ten artykuł do zakładek - będziesz do niego wracać podczas pisania pracy!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Articles -->
+          <div class="card">
+            <h3 class="font-bold text-gray-900 mb-4 flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Powiązane Poradniki
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="/poradnik-pisania/struktura" class="text-sm text-primary-600 hover:text-primary-700 hover:underline">
+                  Struktura Pracy Magisterskiej
+                </a>
+              </li>
+              <li>
+                <a href="/poradnik-pisania/problem-badawczy" class="text-sm text-primary-600 hover:text-primary-700 hover:underline">
+                  Problem Badawczy i Hipotezy
+                </a>
+              </li>
+              <li>
+                <a href="/poradnik-pisania/metodologia" class="text-sm text-primary-600 hover:text-primary-700 hover:underline">
+                  Metodologia Badań
+                </a>
+              </li>
+              <li>
+                <a href="/poradnik-pisania/bibliografia" class="text-sm text-primary-600 hover:text-primary-700 hover:underline">
+                  Bibliografia i Cytowania
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA Card -->
+          <div class="card bg-gradient-to-br from-accent-500 to-primary-600 text-white">
+            <h3 class="font-bold text-lg mb-3">Potrzebujesz więcej pomocy?</h3>
+            <p class="text-sm text-white/90 mb-4">
+              Sprawdź naszą sekcję o wykorzystaniu AI w pisaniu prac magisterskich.
+            </p>
+            <a href="/ai-w-pisaniu-prac-mgr" class="inline-flex items-center justify-center w-full bg-white text-primary-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              AI w Pisaniu Prac
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  /* Article Content Styling */
+  .article-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .article-content h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #e5e7eb;
+  }
+
+  .article-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content strong {
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .article-content ul, .article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+  }
+
+  .article-content ul li {
+    position: relative;
+  }
+
+  .article-content ul li::before {
+    content: "▸";
+    position: absolute;
+    left: -1.25rem;
+    color: #0284c7;
+    font-weight: 700;
+  }
+
+  .article-content a {
+    color: #0284c7;
+    text-decoration: underline;
+    text-decoration-color: #bae6fd;
+    text-underline-offset: 2px;
+    transition: all 0.2s;
+  }
+
+  .article-content a:hover {
+    color: #0369a1;
+    text-decoration-color: #0284c7;
+  }
+
+  .article-content blockquote {
+    border-left: 4px solid #0284c7;
+    background-color: #f0f9ff;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    font-style: italic;
+  }
+
+  .article-content code {
+    background-color: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+  }
+
+  .article-content pre {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .article-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+  }
+
+  .article-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  .article-content th,
+  .article-content td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .article-content th {
+    background-color: #f9fafb;
+    font-weight: 600;
+  }
+
+  .article-content img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Highlight boxes */
+  .article-content .highlight {
+    background-color: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+  }
+</style>
