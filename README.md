@@ -102,4 +102,4 @@ Kompleksowy poradnik pisania prac magisterskich - od pomysłu do obrony.
 
 ## 📄 License
 
-© 2024 MagisterkaOnline.pl - Wszelkie prawa zastrzeżone
+© 2025 MagisterkaOnline.pl - Wszelkie prawa zastrzeżone
