@@ -1,0 +1,281 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+---
+
+<ArticleLayout
+  title="Bibliografia w pracy magisterskiej - poradnik"
+  description="Kompletny przewodnik po tworzeniu bibliografii do pracy magisterskiej. Dowiedz się, jak napisać profesjonalną bibliografię mgr, która odpowiada akademickim wymaganiom."
+  readingTime="15 min"
+>
+  <!-- 
+    ==========================================
+    MIEJSCE NA WKLEJENIE TREŚCI ARTYKUŁU
+    ==========================================
+    
+    INSTRUKCJA:
+    1. Wklej swoją treść HTML poniżej tego komentarza
+    2. Treść powinna zawierać znaczniki HTML: <h2>, <h3>, <p>, <ul>, <li>, <strong>, itp.
+    3. Nie musisz dodawać div'ów czy klas - formatowanie jest automatyczne
+    4. Możesz używać:
+       - <h2> dla głównych sekcji (będą miały podkreślenie)
+       - <h3> dla podsekcji
+       - <p> dla akapitów
+       - <strong> dla pogrubienia
+       - <ul> i <li> dla list (będą miały niebieskie strzałki)
+       - <blockquote> dla cytatów (niebieskie tło)
+    
+    Przykład:
+    <h2><strong>Tytuł sekcji</strong></h2>
+    <p>Treść akapitu z <strong>pogrubionym tekstem</strong>.</p>
+    <ul>
+      <li>Punkt pierwszy</li>
+      <li>Punkt drugi</li>
+    </ul>
+  -->
+
+  <!-- WKLEJ TREŚĆ TUTAJ -->
+<h2>Podstawowe elementy opisu bibliograficznego</h2>
+
+<p>Prawidłowo sporządzona bibliografia stanowi fundament każdej pracy licencjackiej. Każda pozycja bibliograficzna musi zawierać określone elementy ułożone w konkretnej kolejności. Podstawowym składnikiem jest oznaczenie autorstwa – w przypadku pojedynczego autora podajemy nazwisko oraz inicjał imienia. Gdy publikacja ma dwóch lub trzech autorów, wymieniamy ich wszystkich, natomiast przy większej liczbie twórców dopuszczalne jest wskazanie tylko pierwszego z dopiskiem „i in."</p>
+<!-- OZDOBNIK 1: Struktura Opisu Bibliograficznego -->
+<div class="my-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-xl p-6 shadow-lg">
+  <div class="flex items-start mb-4">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">📚 Wzór opisu bibliograficznego - książka</h3>
+      <div class="bg-white rounded-lg p-4 border-2 border-blue-200 font-mono text-sm">
+        <div class="space-y-3">
+          <div class="flex items-start">
+            <span class="inline-block bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold mr-3 mt-0.5">1</span>
+            <div>
+              <strong class="text-blue-700">Nazwisko, I.</strong>
+              <p class="text-xs text-gray-600">Autor (nazwisko, inicjał imienia)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="inline-block bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold mr-3 mt-0.5">2</span>
+            <div>
+              <em class="text-blue-700">Tytuł publikacji. Podtytuł</em>
+              <p class="text-xs text-gray-600">Tytuł (kursywa, z podtytułem)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="inline-block bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold mr-3 mt-0.5">3</span>
+            <div>
+              <span class="text-blue-700">Wydawnictwo,</span>
+              <p class="text-xs text-gray-600">Nazwa wydawnictwa</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="inline-block bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold mr-3 mt-0.5">4</span>
+            <div>
+              <span class="text-blue-700">Miasto</span>
+              <p class="text-xs text-gray-600">Miejsce wydania</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="inline-block bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold mr-3 mt-0.5">5</span>
+            <div>
+              <span class="text-blue-700">2024</span>
+              <p class="text-xs text-gray-600">Rok wydania</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 pt-4 border-t-2 border-blue-100">
+          <p class="text-xs text-gray-700 font-sans"><strong>Przykład:</strong></p>
+          <p class="text-gray-800 mt-1">Kowalski, J. <em>Metodologia badań naukowych. Teoria i praktyka</em>, PWN, Warszawa 2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Tytuł publikacji zapisujemy kursywą, zachowując oryginalną pisownię wraz z ewentualnym podtytułem. W przypadku prac zbiorowych przed tytułem umieszczamy adnotację o redakcji naukowej. Dane wydawnicze obejmują miejsce publikacji oraz rok wydania, a w przypadku książek również nazwę wydawnictwa. Dla artykułów w czasopismach niezbędne jest podanie numeru tomu, zeszytu oraz zakresu stron.</p>
+
+<p>Źródła elektroniczne wymagają dodatkowych informacji – adresu URL oraz daty dostępu do zasobu. Akty prawne opisujemy według specyficznych zasad, wskazując typ dokumentu, datę uchwalenia oraz miejsce publikacji w dzienniku urzędowym. Każdy element opisu oddzielamy odpowiednimi znakami interpunkcyjnymi, najczęściej przecinkami lub kropkami, zachowując konsekwencję w całej bibliografii.</p>
+
+<h2>Systemy cytowania w pracach</h2>
+
+<p>W polskich uczelniach dominują dwa główne systemy cytowania źródeł. System oksfordzki, nazywany również tradycyjnym, polega na umieszczaniu w tekście odsyłaczy numerycznych prowadzących do przypisów dolnych. W stopce strony zamieszcza się pełny opis bibliograficzny przy pierwszym odwołaniu do danego źródła, a przy kolejnych wykorzystuje się skróty typu „tamże" lub „dz. cyt." Ten sposób pozwala na szczegółowe komentarze i dodatkowe wyjaśnienia bezpośrednio w przypisach.</p>
+
+<p>System harwardzki charakteryzuje się cytowaniem bezpośrednio w treści głównej poprzez podanie w nawiasie nazwiska autora, roku publikacji oraz numeru strony. Pełne dane bibliograficzne pojawiają się wyłącznie w zestawieniu na końcu pracy. Ta metoda sprawia, że tekst jest bardziej przejrzysty, choć ogranicza możliwość dodawania rozbudowanych komentarzy.</p>
+
+<ul>
+<li>System oksfordzki wymaga numeracji ciągłej przypisów przez całą pracę</li>
+<li>System harwardzki ułatwia szybką identyfikację źródła bez sprawdzania stopki</li>
+<li>Wybór systemu powinien być uzgodniony z promotorem przed rozpoczęciem pisania</li>
+<li>Niedopuszczalne jest mieszanie obu systemów w jednej pracy</li>
+<li>Oba systemy wymagają konsekwentnego stosowania jednolitych zasad formatowania</li>
+</ul>
+
+<!-- OZDOBNIK 3: Przykłady Cytowania -->
+<div class="my-8 bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 rounded-r-xl p-6 shadow-md">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-lg font-bold text-gray-900 mb-4">💬 Przykłady cytowania w praktyce</h3>
+      
+      <div class="space-y-4">
+        <!-- System Oksfordzki -->
+        <div class="bg-white rounded-lg p-4 border-2 border-purple-200">
+          <p class="font-bold text-purple-700 mb-2 flex items-center">
+            <span class="bg-purple-100 px-2 py-1 rounded text-xs mr-2">OKSFORDZKI</span>
+            W tekście głównym:
+          </p>
+          <p class="text-gray-800 text-sm mb-3 pl-4 border-l-2 border-purple-200">
+            "Badania wykazały istotny wpływ motywacji na produktywność<sup>1</sup>."
+          </p>
+          <p class="font-bold text-purple-700 mb-2">W stopce strony:</p>
+          <p class="text-gray-700 text-xs pl-4 border-l-2 border-purple-200 font-mono">
+            <sup>1</sup> Kowalski J., <em>Psychologia pracy</em>, PWN, Warszawa 2023, s. 145.
+          </p>
+        </div>
+
+        <!-- System Harwardzki -->
+        <div class="bg-white rounded-lg p-4 border-2 border-pink-200">
+          <p class="font-bold text-pink-700 mb-2 flex items-center">
+            <span class="bg-pink-100 px-2 py-1 rounded text-xs mr-2">HARWARDZKI</span>
+            W tekście głównym:
+          </p>
+          <p class="text-gray-800 text-sm pl-4 border-l-2 border-pink-200">
+            "Badania wykazały istotny wpływ motywacji na produktywność (Kowalski 2023, s. 145)."
+          </p>
+          <p class="font-bold text-pink-700 mb-2 mt-3">W bibliografii końcowej:</p>
+          <p class="text-gray-700 text-xs pl-4 border-l-2 border-pink-200 font-mono">
+            Kowalski, J. (2023). <em>Psychologia pracy</em>. Warszawa: PWN.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Niezależnie od wybranego systemu kluczowa jest konsekwencja – wszystkie cytowania i odniesienia muszą być zgodne z przyjętą konwencją. Zmiana systemu w trakcie pisania pracy wymaga przerobienia wszystkich dotychczasowych odwołań, dlatego decyzję należy podjąć na początku procesu tworzenia rozprawy.</p>
+<!-- OZDOBNIK 2: Porównanie Systemów Cytowania -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Cecha</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">System Oksfordzki</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">System Harwardzki</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Miejsce cytowania</td>
+        <td class="px-6 py-4 text-gray-700">Przypisy dolne (stopka)</td>
+        <td class="px-6 py-4 text-gray-700">W tekście głównym (nawiasy)</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Forma zapisu</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">¹ Kowalski J., <em>Tytuł</em>, s. 15</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">(Kowalski 2024, s. 15)</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Numeracja</td>
+        <td class="px-6 py-4 text-gray-700">Ciągła przez całą pracę</td>
+        <td class="px-6 py-4 text-gray-700">Brak numeracji</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Komentarze</td>
+        <td class="px-6 py-4 text-gray-700">✅ Możliwe rozbudowane</td>
+        <td class="px-6 py-4 text-gray-700">❌ Ograniczone</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Czytelność tekstu</td>
+        <td class="px-6 py-4 text-gray-700">Średnia (sprawdzanie stopki)</td>
+        <td class="px-6 py-4 text-gray-700">Wysoka (szybka identyfikacja)</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Popularność w PL</td>
+        <td class="px-6 py-4 text-gray-700">Nauki humanistyczne</td>
+        <td class="px-6 py-4 text-gray-700">Nauki społeczne, ścisłe</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Trudność edycji</td>
+        <td class="px-6 py-4 text-gray-700">Wysoka (przenumerowanie)</td>
+        <td class="px-6 py-4 text-gray-700">Niska (łatwe zmiany)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2>Porządkowanie pozycji w bibliografii</h2>
+
+<p>Bibliografia załącznikowa umieszczana jest zawsze po tekście głównym pracy, przed ewentualnymi załącznikami. Podstawową zasadą porządkowania jest podział na kategorie według typu źródeł – wyodrębnia się publikacje książkowe, artykuły w czasopismach, rozdziały w pracach zbiorowych, źródła internetowe oraz akty prawne. Taki układ ułatwia odnalezienie konkretnej pozycji i świadczy o metodyczności autora.</p>
+
+<p>W obrębie każdej kategorii pozycje szereguje się alfabetycznie według nazwiska pierwszego autora lub redaktora. Gdy ten sam autor ma kilka publikacji, układa się je chronologicznie od najstarszej do najnowszej. Wszystkie wpisy w bibliografii należy ponumerować kolejno cyframi arabskimi, przy czym numeracja może być ciągła przez wszystkie kategorie lub rozpoczynać się od nowa w każdej sekcji.</p>
+
+<p>W zapisie bibliograficznym nazwisko autora podajemy przed inicjałem imienia, co odróżnia ten sposób od przypisów, gdzie kolejność jest odwrotna. Nie stosuje się skrótów charakterystycznych dla przypisów – każda pozycja zawiera pełne dane. Formatowanie powinno być jednolite: wielkość czcionki zwykle o dwa punkty mniejsza niż w tekście głównym, odstępy między pozycjami zapewniające czytelność, konsekwentne wcięcia akapitowe.</p>
+
+<p>Najczęstsze błędy to niekompletne dane wydawnicze, brak numerów stron dla artykułów, niespójna pisownia nazwisk czy pomieszanie różnych systemów zapisu. Warto pamiętać, że w bibliografii muszą znaleźć się wyłącznie te źródła, które zostały faktycznie przywołane w tekście pracy – umieszczanie dodatkowych pozycji dla zwiększenia objętości jest praktyką niedopuszczalną.</p>
+
+<!-- OZDOBNIK 4: Checklist Bibliografii -->
+<div class="my-8 bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 rounded-xl p-6 shadow-lg">
+  <div class="flex items-start mb-4">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">⚠️ Najczęstsze błędy w bibliografii</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="bg-white p-3 rounded-lg border-l-4 border-red-500">
+          <p class="font-semibold text-red-700 text-sm">❌ Brak danych wydawniczych</p>
+          <p class="text-xs text-gray-600 mt-1">Pamiętaj: wydawnictwo, miejsce, rok!</p>
+        </div>
+        <div class="bg-white p-3 rounded-lg border-l-4 border-red-500">
+          <p class="font-semibold text-red-700 text-sm">❌ Niespójna pisownia</p>
+          <p class="text-xs text-gray-600 mt-1">Jednolity format przez całą bibliografię</p>
+        </div>
+        <div class="bg-white p-3 rounded-lg border-l-4 border-red-500">
+          <p class="font-semibold text-red-700 text-sm">❌ Brak numerów stron</p>
+          <p class="text-xs text-gray-600 mt-1">Dla artykułów: zawsze zakres stron!</p>
+        </div>
+        <div class="bg-white p-3 rounded-lg border-l-4 border-red-500">
+          <p class="font-semibold text-red-700 text-sm">❌ "Martwe" pozycje</p>
+          <p class="text-xs text-gray-600 mt-1">Bibliografia = tylko cytowane źródła</p>
+        </div>
+        <div class="bg-white p-3 rounded-lg border-l-4 border-red-500">
+          <p class="font-semibold text-red-700 text-sm">❌ Mieszanie systemów</p>
+          <p class="text-xs text-gray-600 mt-1">Wybierz jeden: oksfordzki lub harwardzki</p>
+        </div>
+        <div class="bg-white p-3 rounded-lg border-l-4 border-red-500">
+          <p class="font-semibold text-red-700 text-sm">❌ Brak URL/daty dostępu</p>
+          <p class="text-xs text-gray-600 mt-1">Źródła online: URL + data wejścia</p>
+        </div>
+      </div>
+      <div class="mt-4 p-4 bg-white rounded-lg border-2 border-green-300">
+        <p class="text-sm text-gray-800 font-semibold text-center">
+          ✅ <strong class="text-green-700">PRO TIP:</strong> Korzystaj z menedżera bibliografii (Zotero, Mendeley) – automatyzacja = mniej błędów!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- KONIEC MIEJSCA NA TREŚĆ -->
+
+  <!-- Next Steps -->
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">Następne kroki</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="/poradnik-pisania/struktura" class="card hover:shadow-lg transition-all border-2 border-transparent hover:border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Struktura Pracy</h4>
+        <p class="text-sm text-gray-600">Poznaj pełną strukturę pracy magisterskiej</p>
+      </a>
+      <a href="/poradnik-pisania/metodologia" class="card hover:shadow-lg transition-all border-2 border-transparent hover:border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Metodologia</h4>
+        <p class="text-sm text-gray-600">Wybierz właściwą metodologię badawczą</p>
+      </a>
+    </div>
+  </div>
+</ArticleLayout>
