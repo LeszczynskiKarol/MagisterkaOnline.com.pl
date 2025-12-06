@@ -1,0 +1,347 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+
+// Wszystkie artykuły metodologii pogrupowane tematycznie
+const metodologiaArticles = {
+  podstawy: {
+    name: "📚 Podstawy metodologii",
+    description: "Fundamenty metodologii badawczej",
+    articles: [
+      {
+        title: "Metody badawcze",
+        description: "Przegląd głównych metod badawczych stosowanych w pracach magisterskich.",
+        href: "/metodologia/metody-badawcze/",
+        readTime: "12 min"
+      },
+      {
+        title: "Techniki i narzędzia badawcze",
+        description: "Szczegółowy opis technik i narzędzi używanych w badaniach naukowych.",
+        href: "/metodologia/techniki-i-narzedzia-badawcze/",
+        readTime: "10 min"
+      },
+      {
+        title: "Problemy badawcze",
+        description: "Jak prawidłowo sformułować problem badawczy w pracy magisterskiej.",
+        href: "/metodologia/problemy-badawcze-w-pracy-magisterskiej/",
+        readTime: "8 min"
+      },
+      {
+        title: "Hipotezy badawcze",
+        description: "Formułowanie hipotez badawczych - teoria i praktyczne przykłady.",
+        href: "/metodologia/hipotezy-badawcze/",
+        readTime: "10 min"
+      },
+    ]
+  },
+  zmienne: {
+    name: "📊 Zmienne i wskaźniki",
+    description: "Operacjonalizacja pojęć",
+    articles: [
+      {
+        title: "Zmienne badawcze",
+        description: "Rodzaje zmiennych: zależne, niezależne, pośredniczące i kontrolne.",
+        href: "/metodologia/zmienne-badawcze/",
+        readTime: "9 min"
+      },
+      {
+        title: "Wskaźniki badawcze",
+        description: "Jak konstruować wskaźniki do pomiaru zmiennych w badaniach.",
+        href: "/metodologia/wskazniki-badawcze/",
+        readTime: "8 min"
+      },
+      {
+        title: "Dobór próby badawczej",
+        description: "Metody doboru próby: losowy, celowy, kwotowy i warstwowy.",
+        href: "/metodologia/dobor-proby-badawczej/",
+        readTime: "11 min"
+      },
+    ]
+  },
+  ilosciowe: {
+    name: "📈 Badania ilościowe",
+    description: "Metody ilościowe i statystyka",
+    articles: [
+      {
+        title: "Badania ilościowe",
+        description: "Charakterystyka badań ilościowych, kiedy je stosować i jak projektować.",
+        href: "/metodologia/badania-ilosciowe/",
+        readTime: "12 min"
+      },
+      {
+        title: "Sondaż diagnostyczny",
+        description: "Najpopularniejsza metoda badawcza - jak ją prawidłowo zastosować.",
+        href: "/metodologia/sondaz-diagnostyczny/",
+        readTime: "10 min"
+      },
+      {
+        title: "Konstrukcja kwestionariusza ankiety",
+        description: "Jak skonstruować profesjonalny kwestionariusz ankiety krok po kroku.",
+        href: "/metodologia/kwestionariusz-ankiety-konstrukcja/",
+        readTime: "14 min"
+      },
+      {
+        title: "Jak przeprowadzić ankietę",
+        description: "Praktyczny przewodnik po przeprowadzaniu badań ankietowych.",
+        href: "/metodologia/jak-przeprowadzic-ankiete/",
+        readTime: "9 min"
+      },
+      {
+        title: "Analiza danych ilościowych",
+        description: "Metody analizy statystycznej danych z badań ilościowych.",
+        href: "/metodologia/analiza-danych-ilosciowych/",
+        readTime: "15 min"
+      },
+    ]
+  },
+  jakosciowe: {
+    name: "💬 Badania jakościowe",
+    description: "Metody jakościowe i interpretacja",
+    articles: [
+      {
+        title: "Badania jakościowe",
+        description: "Wprowadzenie do badań jakościowych - kiedy i jak je stosować.",
+        href: "/metodologia/badania-jakosciowe/",
+        readTime: "11 min"
+      },
+      {
+        title: "Jak przeprowadzić wywiad",
+        description: "Techniki prowadzenia wywiadów pogłębionych i fokusowych.",
+        href: "/metodologia/jak-przeprowadzic-wywiad/",
+        readTime: "12 min"
+      },
+      {
+        title: "Analiza danych jakościowych",
+        description: "Kodowanie, kategoryzacja i interpretacja danych jakościowych.",
+        href: "/metodologia/analiza-danych-jakosciowych/",
+        readTime: "13 min"
+      },
+    ]
+  },
+  realizacja: {
+    name: "🎯 Realizacja badań",
+    description: "Praktyczne aspekty badań",
+    articles: [
+      {
+        title: "Planowanie i prowadzenie badań",
+        description: "Harmonogram badań, organizacja i dokumentacja procesu badawczego.",
+        href: "/metodologia/planowanie-i-prowadzenie-badan/",
+        readTime: "10 min"
+      },
+    ]
+  }
+};
+
+// Płaska lista wszystkich artykułów dla szybkiego dostępu
+const allArticles = Object.values(metodologiaArticles).flatMap(cat => cat.articles);
+
+// Popularne artykuły (do wyróżnienia)
+const popularArticles = [
+  "/metodologia/hipotezy-badawcze/",
+  "/metodologia/badania-ilosciowe/",
+  "/metodologia/jak-przeprowadzic-ankiete/",
+  "/metodologia/badania-jakosciowe/"
+];
+---
+
+<Layout 
+  title="Metodologia badań w pracy magisterskiej - kompletny przewodnik"
+  description="Kompletny przewodnik po metodologii badań w pracy magisterskiej. Metody ilościowe i jakościowe, hipotezy, zmienne, ankiety, wywiady, analiza danych. 16+ szczegółowych artykułów."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-10"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-400 rounded-full mix-blend-overlay filter blur-3xl opacity-10"></div>
+    </div>
+    
+    <div class="container-custom relative py-12 md:py-20">
+      <!-- Breadcrumbs -->
+      <nav class="mb-6" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm text-primary-200">
+          <li>
+            <a href="/" class="hover:text-white transition-colors">Start</a>
+          </li>
+          <li>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </li>
+          <li class="text-white font-medium">
+            Metodologia
+          </li>
+        </ol>
+      </nav>
+
+      <div class="max-w-4xl">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="text-5xl">🔬</span>
+          <span class="bg-white/20 px-4 py-1 rounded-full text-sm font-medium">16+ artykułów</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          Metodologia badań w pracy magisterskiej
+        </h1>
+        <p class="text-xl text-primary-100 mb-8 max-w-3xl leading-relaxed">
+          Kompletny przewodnik po metodologii badawczej. Wszystko o metodach, technikach, narzędziach badawczych, hipotezach, zmiennych i analizie danych.
+        </p>
+        
+        <!-- Quick stats -->
+        <div class="flex flex-wrap gap-6 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span class="text-primary-100">{allArticles.length} artykułów</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-primary-100">~3h czytania</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-primary-100">Aktualizowane 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Navigation -->
+  <section class="bg-white border-b border-gray-100 py-4 sticky top-16 lg:top-20 z-40">
+    <div class="container-custom">
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 -mb-2 scrollbar-hide">
+        <span class="text-sm text-gray-500 flex-shrink-0">Przejdź do:</span>
+        {Object.entries(metodologiaArticles).map(([key, category]) => (
+          <a 
+            href={`#${key}`} 
+            class="flex-shrink-0 text-sm bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 px-4 py-2 rounded-full transition-colors whitespace-nowrap"
+          >
+            {category.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Info Box -->
+        <div class="bg-primary-50 border-l-4 border-primary-600 p-6 rounded-r-xl mb-12">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0">
+              <svg class="h-6 w-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-primary-900 mb-1">
+                Jak korzystać z tego przewodnika?
+              </h3>
+              <p class="text-primary-800">
+                Artykuły są pogrupowane tematycznie. Możesz czytać je po kolei lub przejść bezpośrednio do interesującej Cię sekcji. Każdy artykuł zawiera praktyczne przykłady i wskazówki.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Articles by Category -->
+        {Object.entries(metodologiaArticles).map(([key, category]) => (
+          <div id={key} class="mb-12 scroll-mt-32">
+            <div class="flex items-center gap-3 mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">{category.name}</h2>
+              <span class="text-gray-400 text-sm">— {category.description}</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {category.articles.map((article) => {
+                const isPopular = popularArticles.includes(article.href);
+                return (
+                  <a 
+                    href={article.href} 
+                    class={`group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border-2 ${isPopular ? 'border-amber-300 bg-amber-50/30' : 'border-transparent hover:border-primary-300'}`}
+                  >
+                    <div class="flex justify-between items-start mb-3">
+                      <h3 class="font-bold text-gray-900 group-hover:text-primary-600 transition-colors flex items-center gap-2">
+                        {article.title}
+                        {isPopular && (
+                          <span class="text-xs bg-amber-400 text-amber-900 px-2 py-0.5 rounded font-medium">Popularne</span>
+                        )}
+                      </h3>
+                      <span class="text-xs text-gray-400 flex-shrink-0 ml-2">{article.readTime}</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                      {article.description}
+                    </p>
+                    <div class="flex items-center text-primary-600 font-medium text-sm">
+                      Czytaj artykuł
+                      <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Articles -->
+  <section class="py-12 bg-white">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">
+          Powiązane artykuły
+        </h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="/cel-pracy-magisterskiej/" class="bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 px-5 py-3 rounded-lg transition-colors">
+            📎 Cel pracy magisterskiej
+          </a>
+          <a href="/konspekt/" class="bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 px-5 py-3 rounded-lg transition-colors">
+            📋 Konspekt pracy
+          </a>
+          <a href="/bibliografia/" class="bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 px-5 py-3 rounded-lg transition-colors">
+            📚 Bibliografia
+          </a>
+          <a href="/formatowanie/" class="bg-gray-100 hover:bg-primary-100 text-gray-700 hover:text-primary-700 px-5 py-3 rounded-lg transition-colors">
+            📄 Formatowanie
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Home -->
+  <section class="py-8 bg-gray-50 border-t border-gray-100">
+    <div class="container-custom">
+      <div class="flex justify-center">
+        <a href="/" class="inline-flex items-center text-gray-600 hover:text-primary-600 transition-colors">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Wróć do strony głównej
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

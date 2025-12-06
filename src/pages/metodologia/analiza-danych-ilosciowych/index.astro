@@ -1,0 +1,530 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+---
+
+<ArticleLayout
+  title="Analiza danych ilościowych w pracy magisterskiej - poradnik"
+  description="Kompletny przewodnik po analizie danych ilościowych w pracy magisterskiej. Dowiedz się, jak przeprowadzić profesjonalną analizę danych ilościowych do pracy mgr, która odpowiada akademickim wymaganiom."
+  readingTime="15 min"
+>
+  <!-- 
+    ==========================================
+    MIEJSCE NA WKLEJENIE TREŚCI ARTYKUŁU
+    ==========================================
+    
+    INSTRUKCJA:
+    1. Wklej swoją treść HTML poniżej tego komentarza
+    2. Treść powinna zawierać znaczniki HTML: <h2>, <h3>, <p>, <ul>, <li>, <strong>, itp.
+    3. Nie musisz dodawać div'ów czy klas - formatowanie jest automatyczne
+    4. Możesz używać:
+       - <h2> dla głównych sekcji (będą miały podkreślenie)
+       - <h3> dla podsekcji
+       - <p> dla akapitów
+       - <strong> dla pogrubienia
+       - <ul> i <li> dla list (będą miały niebieskie strzałki)
+       - <blockquote> dla cytatów (niebieskie tło)
+    
+    Przykład:
+    <h2><strong>Tytuł sekcji</strong></h2>
+    <p>Treść akapitu z <strong>pogrubionym tekstem</strong>.</p>
+    <ul>
+      <li>Punkt pierwszy</li>
+      <li>Punkt drugi</li>
+    </ul>
+  -->
+
+  <!-- WKLEJ TREŚĆ TUTAJ -->
+
+<h1>Analiza danych ilościowych w pracy magisterskiej - poradnik</h1>
+
+<p>Analiza danych ilościowych stanowi fundament wielu prac magisterskich w naukach społecznych, ekonomicznych i zarządzania. To proces systematycznego badania liczb, statystyk i mierzalnych zjawisk, który pozwala na obiektywną weryfikację hipotez badawczych oraz formułowanie rzetelnych wniosków naukowych. W przeciwieństwie do badań jakościowych, które koncentrują się na głębokim zrozumieniu zjawisk, metody ilościowe umożliwiają generalizację wyników na szersze populacje oraz identyfikację statystycznie istotnych zależności między zmiennymi. Współczesne oprogramowanie statystyczne, takie jak SPSS, R czy Python, znacząco ułatwiło przeprowadzanie skomplikowanych analiz, jednak kluczowa pozostaje umiejętność właściwej interpretacji otrzymanych wyników oraz ich prezentacji w kontekście pytań badawczych.</p>
+
+<!-- OZDOBNIK 1: Kiedy stosować metodę ilościową -->
+<div class="my-8 bg-gradient-to-br from-accent-50 to-primary-50 border-l-4 border-accent-500 rounded-r-xl p-6 shadow-md">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-lg font-bold text-gray-900 mb-3">💡 Wybierz metodę ilościową, gdy...</h3>
+      <ul class="space-y-2 text-gray-700">
+        <li class="flex items-start">
+          <span class="font-bold text-accent-600 mr-2">✓</span>
+          <span>Chcesz odpowiedzieć na pytanie <strong>"ile"</strong>, <strong>"jak często"</strong>, <strong>"jaka jest zależność"</strong></span>
+        </li>
+        <li class="flex items-start">
+          <span class="font-bold text-accent-600 mr-2">✓</span>
+          <span>Potrzebujesz <strong>generalizacji wyników</strong> na szerszą populację</span>
+        </li>
+        <li class="flex items-start">
+          <span class="font-bold text-accent-600 mr-2">✓</span>
+          <span>Masz dostęp do <strong>dużej próby</strong> (min. 30-50 osób, idealnie 100+)</span>
+        </li>
+        <li class="flex items-start">
+          <span class="font-bold text-accent-600 mr-2">✓</span>
+          <span>Chcesz <strong>testować hipotezy</strong> i weryfikować zależności statystyczne</span>
+        </li>
+        <li class="flex items-start">
+          <span class="font-bold text-accent-600 mr-2">✓</span>
+          <span>Zjawisko jest <strong>dobrze rozpoznane</strong> i możesz je zmierzyć liczbowo</span>
+        </li>
+        <li class="flex items-start">
+          <span class="font-bold text-accent-600 mr-2">✓</span>
+          <span>Potrzebujesz <strong>obiektywnych, powtarzalnych</strong> wyników</span>
+        </li>
+      </ul>
+      <p class="text-gray-600 mt-4 text-sm italic">
+        Metoda ilościowa = szerokość zamiast głębi. Więcej respondentów, mniej szczegółów od każdego.
+      </p>
+    </div>
+  </div>
+</div>
+
+<h2>Przygotowanie danych do analizy ilościowej</h2>
+
+<p>Proces analizy danych ilościowych rozpoczyna się znacznie wcześniej niż samo przeprowadzenie testów statystycznych. Etap przygotowania danych stanowi fundament całego procesu badawczego i determinuje jakość końcowych wyników. Surowe dane zebrane za pomocą ankiet, pomiarów czy eksperymentów wymagają systematycznego uporządkowania, sprawdzenia i przygotowania do właściwej analizy. Niewłaściwe przygotowanie danych może prowadzić do błędnych wniosków, nawet przy zastosowaniu najbardziej zaawansowanych technik statystycznych. Dlatego każdy badacz powinien poświęcić odpowiednią ilość czasu na ten kluczowy etap, dokumentując wszystkie podjęte decyzje i transformacje danych.</p>
+
+<h3>Kodowanie i porządkowanie danych</h3>
+
+<p>Kodowanie danych to proces przekształcania surowych informacji zebranych podczas badania w ustrukturyzowany format nadający się do analizy statystycznej. Pierwszym krokiem jest stworzenie książki kodowej, która stanowi szczegółowy przewodnik opisujący każdą zmienną w bazie danych. Książka kodowa powinna zawierać nazwy zmiennych, ich etykiety, typ zmiennej (nominalna, porządkowa, przedziałowa, ilorazowa), możliwe wartości oraz kody przypisane do poszczególnych odpowiedzi. Na przykład, dla zmiennej "płeć" można zastosować kodowanie: 1 = kobieta, 2 = mężczyzna, 99 = brak danych. Konsekwentne stosowanie systemu kodowania w całej bazie danych jest kluczowe dla uniknięcia błędów na późniejszych etapach analizy.</p>
+
+<p>Porządkowanie danych wymaga również standaryzacji formatów, szczególnie w przypadku dat, liczb dziesiętnych czy tekstowych odpowiedzi na pytania otwarte. W programach statystycznych należy właściwie zdefiniować typ każdej zmiennej oraz jej właściwości pomiarowe. Zmienne nominalne, takie jak miejsce zamieszkania czy wykształcenie, wymagają innego traktowania niż zmienne ciągłe, takie jak wiek czy dochód. Utworzenie przejrzystej struktury danych, w której każdy wiersz reprezentuje jednego respondenta, a każda kolumna jedną zmienną, ułatwia późniejsze operacje analityczne. Warto również stworzyć zmienne pochodne, które mogą być przydatne w analizie, na przykład grupując wiek w przedziały czy obliczając wskaźniki złożone z kilku pytań kwestionariusza.</p>
+
+<h3>Weryfikacja i czyszczenie bazy danych</h3>
+
+<p>Weryfikacja jakości danych to niezbędny etap poprzedzający właściwą analizę statystyczną. Proces ten polega na systematycznym przeglądzie bazy danych w poszukiwaniu błędów, niespójności i wartości odstających, które mogą zniekształcić wyniki badania. Pierwszym krokiem jest identyfikacja brakujących danych, które w statystyce oznacza się zazwyczaj specjalnym kodem (np. 99, 999 lub systemowym brakiem danych). Należy ustalić przyczyny braków danych - czy wynikają one z odmowy odpowiedzi, pominięcia pytania, czy błędu technicznego. W zależności od skali i charakteru braków, badacz może zdecydować się na różne strategie: usunięcie przypadków z brakami, imputację (uzupełnienie) brakujących wartości lub zastosowanie specjalistycznych metod analizy uwzględniających braki.</p>
+
+<p>Identyfikacja wartości odstających (outliers) to kolejny kluczowy element czyszczenia danych. Wartości odstające to obserwacje znacząco różniące się od pozostałych danych, które mogą wynikać z błędów pomiarowych, błędnego wprowadzenia danych lub reprezentować rzeczywiste, ale ekstremalne przypadki. Do ich identyfikacji wykorzystuje się metody graficzne, takie jak wykresy pudełkowe (boxploty), oraz metody statystyczne, jak kryterium 3 odchyleń standardowych od średniej. Nie każdą wartość odstającą należy automatycznie usuwać - wymaga to przemyślanej decyzji w kontekście specyfiki badania. Dodatkowo należy sprawdzić logiczną spójność danych, na przykład czy osoba deklarująca 25 lat nie ma jednocześnie 30 lat stażu pracy, czy wartości mieszczą się w dopuszczalnym zakresie dla danej skali pomiarowej.</p>
+
+<!-- TABELA: Etapy przygotowania danych -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Etap</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Co robisz</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Narzędzia</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">1️⃣ Kodowanie</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Przypisanie kodów liczbowych odpowiedziom (np. 1=kobieta, 2=mężczyzna)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Excel, SPSS, książka kodowa</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">2️⃣ Wprowadzenie danych</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Przepisanie danych do programu statystycznego (lub import z ankiety online)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">SPSS, Excel, Google Forms export</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">3️⃣ Definiowanie zmiennych</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Określenie typu (nominalna, porządkowa, ilościowa), etykiet, braków danych</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">SPSS Variable View</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">4️⃣ Czyszczenie danych</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Identyfikacja błędów, wartości odstających, braków danych</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Statystyki opisowe, boxploty</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">5️⃣ Transformacje</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Tworzenie zmiennych złożonych, rekodowanie, standaryzacja</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">SPSS Transform, Compute</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">6️⃣ Sprawdzenie założeń</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Test normalności, homogeniczność wariancji przed testami parametrycznymi</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Test Shapiro-Wilka, Levene'a</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Statystyki opisowe i eksploracja danych</h2>
+
+<p>Statystyki opisowe stanowią punkt wyjścia każdej analizy ilościowej, dostarczając podstawowych informacji o charakterystyce badanej próby oraz rozkładzie poszczególnych zmiennych. Ten etap analizy ma charakter eksploracyjny i pozwala badaczowi "poznać" swoje dane przed przystąpieniem do testowania hipotez. Właściwe zastosowanie statystyk opisowych umożliwia wykrycie potencjalnych problemów z danymi, zrozumienie ich struktury oraz przygotowanie przemyślanych analiz inferencyjnych. Prezentacja statystyk opisowych w pracy magisterskiej powinna być przejrzysta i kompleksowa, przedstawiając zarówno miary tendencji centralnej, jak i miary rozproszenia dla wszystkich kluczowych zmiennych.</p>
+
+<h3>Miary statystyczne podstawowe</h3>
+
+<p>Średnia arytmetyczna to najbardziej popularna miara tendencji centralnej, obliczana jako suma wszystkich wartości podzielona przez ich liczbę. Choć intuicyjna i szeroko stosowana, średnia jest wrażliwa na wartości odstające i najlepiej sprawdza się dla danych o rozkładzie zbliżonym do normalnego. Mediana, czyli wartość środkowa w uporządkowanym zbiorze danych, stanowi bardziej odpowiednią miarę dla danych skośnych lub zawierających wartości ekstremalne. Moda, najczęściej występująca wartość w zbiorze, jest szczególnie użyteczna dla zmiennych nominalnych i porządkowych. W pracy magisterskiej należy prezentować te miary wraz z odpowiednim kontekstem, na przykład: "Średni wiek respondentów wyniósł 34,5 lat (SD=8,2), przy medianie równej 33 lata, co wskazuje na niemal symetryczny rozkład tej zmiennej w badanej próbie."</p>
+
+<p>Miary rozproszenia dostarczają informacji o zróżnicowaniu danych wokół wartości centralnej. Odchylenie standardowe pokazuje, jak bardzo poszczególne obserwacje odbiegają od średniej - niskie wartości wskazują na homogeniczność próby, wysokie na znaczne zróżnicowanie. Zakres, czyli różnica między wartością maksymalną a minimalną, daje szybki obraz rozpiętości danych. Współczynnik zmienności, wyrażany w procentach, pozwala porównywać rozproszenie między zmiennymi mierzonymi w różnych jednostkach. Dla zmiennych nominalnych i porządkowych stosuje się rozkłady częstości, prezentowane zazwyczaj w formie tabel z liczbami bezwzględnymi i procentami. Wszystkie te miary powinny być prezentowane w przejrzystych tabelach, uzupełnionych o komentarz interpretacyjny odnoszący się do kontekstu badania.</p>
+
+<h3>Wizualizacja danych</h3>
+
+<p>Wizualizacja danych to potężne narzędzie eksploracji i komunikacji wyników badań, które pozwala na szybkie uchwycenie wzorców, trendów i relacji w danych. Histogramy przedstawiają rozkład zmiennych ciągłych, umożliwiając ocenę kształtu rozkładu, symetrii oraz identyfikację potencjalnych wartości odstających. Dla prawidłowej interpretacji wyników testów parametrycznych kluczowe jest sprawdzenie założenia o normalności rozkładu, co można zrobić wizualnie za pomocą histogramu z nałożoną krzywą normalną lub wykresu kwantyl-kwantyl (Q-Q plot). Wykresy słupkowe doskonale nadają się do prezentacji rozkładów zmiennych kategorycznych, pokazując częstości występowania poszczególnych kategorii w sposób czytelny i intuicyjny.</p>
+
+<p>Wykresy pudełkowe (boxploty) to niezwykle informatywne narzędzie, które w jednej grafice prezentuje medianę, kwartyle, zakres oraz wartości odstające. Są szczególnie przydatne do porównywania rozkładów między grupami, na przykład porównania poziomu satysfakcji z pracy między różnymi działami organizacji. Wykresy rozrzutu (scatterploty) wizualizują relacje między dwiema zmiennymi ciągłymi, pozwalając na wstępną ocenę kierunku i siły związku przed przeprowadzeniem formalnej analizy korelacji. W pracy magisterskiej każdy wykres powinien być starannie opisany, z wyraźnym tytułem, podpisami osi oraz legendą. Komentarz pod wykresem powinien kierować uwagę czytelnika na najważniejsze obserwacje i interpretować przedstawione wzorce w kontekście pytań badawczych.</p>
+
+<table>
+<thead>
+<tr>
+<th>Typ wykresu</th>
+<th>Zastosowanie</th>
+<th>Zalety</th>
+<th>Ograniczenia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Histogram</td>
+<td>Rozkład zmiennej ciągłej</td>
+<td>Pokazuje kształt rozkładu, asymetrię</td>
+<td>Wrażliwy na dobór przedziałów klasowych</td>
+</tr>
+<tr>
+<td>Wykres słupkowy</td>
+<td>Zmienne kategoryczne</td>
+<td>Czytelny, łatwy w interpretacji</td>
+<td>Nieodpowiedni dla zmiennych ciągłych</td>
+</tr>
+<tr>
+<td>Boxplot</td>
+<td>Porównanie grup, wartości odstające</td>
+<td>Kompleksowa informacja w jednej grafice</td>
+<td>Wymaga znajomości kwartyli</td>
+</tr>
+<tr>
+<td>Wykres rozrzutu</td>
+<td>Relacje między dwiema zmiennymi</td>
+<td>Wizualizuje kierunek i siłę związku</td>
+<td>Trudny do odczytu przy dużej liczbie punktów</td>
+</tr>
+<tr>
+<td>Wykres liniowy</td>
+<td>Trendy w czasie, serie czasowe</td>
+<td>Pokazuje zmiany i tendencje</td>
+<td>Może sugerować ciągłość tam, gdzie jej nie ma</td>
+</tr>
+<tr>
+<td>Wykres kołowy</td>
+<td>Proporcje części do całości</td>
+<td>Intuicyjny dla prostych danych</td>
+<td>Nieczytelny przy wielu kategoriach</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Testowanie hipotez badawczych</h2>
+
+<p>Testowanie hipotez stanowi serce analizy ilościowej w pracy magisterskiej, umożliwiając weryfikację założeń teoretycznych w oparciu o zebrane dane empiryczne. Proces ten opiera się na logice wnioskowania statystycznego, w której formułujemy hipotezę zerową (zakładającą brak efektu lub różnicy) oraz hipotezę alternatywną (zakładającą istnienie efektu). Następnie, wykorzystując odpowiednie testy statystyczne, oceniamy prawdopodobieństwo uzyskania zaobserwowanych wyników przy założeniu prawdziwości hipotezy zerowej. Jeśli prawdopodobieństwo to (wartość p) jest niższe od przyjętego poziomu istotności (zazwyczaj 0,05), odrzucamy hipotezę zerową na rzecz alternatywnej. Kluczowe jest właściwe dobranie testu statystycznego do typu danych i charakteru pytania badawczego.</p>
+
+<h3>Testy parametryczne</h3>
+
+<p>Test t-Studenta to jeden z najczęściej stosowanych testów parametrycznych, służący do porównywania średnich między dwiema grupami lub do porównania średniej z próby z wartością teoretyczną. Test t dla prób niezależnych stosujemy, gdy chcemy porównać dwie różne grupy (np. kobiety i mężczyźni), podczas gdy test t dla prób zależnych wykorzystujemy do porównania tych samych osób w dwóch pomiarach (np. przed i po interwencji). Założenia testu t obejmują normalność rozkładu zmiennej zależnej w obu grupach oraz homogeniczność wariancji. Wyniki testu t prezentujemy podając wartość statystyki t, stopnie swobody oraz wartość p, na przykład: "Kobiety wykazywały istotnie wyższy poziom satysfakcji (M=4,32, SD=0,65) niż mężczyźni (M=3,87, SD=0,78), t(198)=4,12, p wieksze niż 0,001."</p>
+
+<p>Analiza wariancji ANOVA (Analysis of Variance) rozszerza logikę testu t na sytuacje, w których porównujemy więcej niż dwie grupy. Jednoczynnikowa ANOVA testuje, czy średnie w trzech lub więcej grupach różnią się istotnie statystycznie. Na przykład, możemy porównać poziom zaangażowania pracowników w czterech różnych działach organizacji. Istotny wynik ANOVA (p większe niż 0,05) informuje, że przynajmniej dwie grupy różnią się od siebie, ale nie wskazuje, które konkretnie. Dlatego po uzyskaniu istotnego wyniku ANOVA przeprowadzamy testy post-hoc (np. test Tukeya lub Bonferroniego), które identyfikują konkretne pary grup różniące się istotnie. Dwuczynnikowa ANOVA pozwala jednocześnie badać wpływ dwóch zmiennych niezależnych oraz ich interakcję na zmienną zależną, co znacznie wzbogaca możliwości analityczne.</p>
+
+<p>Korelacja Pearsona mierzy siłę i kierunek liniowego związku między dwiema zmiennymi ciągłymi. Współczynnik korelacji r przyjmuje wartości od -1 do +1, gdzie wartości bliskie -1 oznaczają silny związek ujemny, wartości bliskie +1 silny związek dodatni, a wartości bliskie 0 brak związku liniowego. Interpretując korelację, należy pamiętać, że nie implikuje ona związku przyczynowego - dwie zmienne mogą być skorelowane ze względu na wpływ trzeciej zmiennej lub przypadkowy zbieg okoliczności. Przyjmuje się, że |r| mniejsze niż 0,3 oznacza słabą korelację, 0,3≤|r| mniejsze niż 0,7 umiarkowaną, a |r|≥0,7 silną korelację. W pracy magisterskiej prezentujemy wyniki korelacji wraz z wartością p oraz wielkością próby, na przykład:</p>
+
+<!-- TABELA: Dobór testów statystycznych -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Pytanie badawcze</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Zmienne</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Test parametryczny</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Test nieparametryczny</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900 text-sm">Czy 2 grupy różnią się średnią?</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">1 nominalna (2 grupy) + 1 ilościowa</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Test t-Studenta</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Test U Manna-Whitneya</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900 text-sm">Czy 3+ grupy różnią się średnią?</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">1 nominalna (3+ grup) + 1 ilościowa</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">ANOVA</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Test Kruskala-Wallisa</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900 text-sm">Czy jest związek między 2 zmiennymi ilościowymi?</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">2 ilościowe</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Korelacja Pearsona (r)</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Korelacja Spearmana (rho)</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900 text-sm">Czy jest związek między 2 zmiennymi nominalnymi?</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">2 nominalne</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm" colspan="2">Test Chi-kwadrat (χ²)</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900 text-sm">Czy zmienna X wpływa na Y (przewidywanie)?</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">1+ predyktory + 1 zmienna zależna ilościowa</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm" colspan="2">Regresja liniowa</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900 text-sm">Czy jest zmiana przed/po (te same osoby)?</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">2 pomiary na tej samej próbie</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Test t dla prób zależnych</td>
+        <td class="px-6 py-4 text-gray-700 font-mono text-sm">Test Wilcoxona</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- OZDOBNIK: Kiedy test parametryczny vs nieparametryczny -->
+<div class="my-8 bg-gradient-to-br from-blue-50 to-indigo-50 border-l-4 border-blue-500 rounded-r-xl p-6 shadow-md">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-lg font-bold text-gray-900 mb-2">📊 Parametryczny czy nieparametryczny?</h3>
+      <p class="text-gray-700 mb-3">
+        <strong>Test parametryczny</strong> (mocniejszy) gdy:
+      </p>
+      <ul class="space-y-1 text-gray-600 text-sm mb-3">
+        <li>• Zmienna zależna ma rozkład normalny (test Shapiro-Wilka p>0,05)</li>
+        <li>• Wariancje w grupach są jednorodne (test Levene'a p>0,05)</li>
+        <li>• Próba jest wystarczająco duża (n≥30 w każdej grupie)</li>
+      </ul>
+      <p class="text-gray-700 mb-3">
+        <strong>Test nieparametryczny</strong> (bezpieczniejszy) gdy:
+      </p>
+      <ul class="space-y-1 text-gray-600 text-sm">
+        <li>• Rozkład odbiega od normalnego</li>
+        <li>• Mała próba (n większe niż 30)</li>
+        <li>• Zmienna porządkowa (skala Likerta 1-5)</li>
+        <li>• Występują wartości odstające</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- TABELA: Najczęstsze błędy w analizie ilościowej -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-red-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-red-600 to-red-700 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">❌ Błąd</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">✅ Poprawne Podejście</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Zły dobór testu:</strong><br />
+          Test t dla 3 grup, korelacja dla zmiennych nominalnych
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Dopasowanie testu:</strong><br />
+          Sprawdź typ zmiennych i liczbę grup przed wyborem testu
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Ignorowanie założeń:</strong><br />
+          Test parametryczny bez sprawdzenia normalności
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Weryfikacja założeń:</strong><br />
+          Zawsze sprawdź normalność (Shapiro-Wilk) i homogeniczność wariancji (Levene)
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Korelacja = przyczynowość:</strong><br />
+          "X wpływa na Y" tylko na podstawie korelacji
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Ostrożna interpretacja:</strong><br />
+          Korelacja pokazuje związek, nie przyczynę. Pisz "współwystępuje", nie "powoduje"
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>P-value hunting:</strong><br />
+          Testowanie wszystkiego, aż coś wyjdzie istotne
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Planowane analizy:</strong><br />
+          Testuj tylko to, co wynika z hipotez. Raportuj też nieistotne wyniki
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Tylko p-value:</strong><br />
+          "p większe niż 0,05, więc wynik jest ważny"
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Wielkość efektu:</strong><br />
+          Podawaj też d Cohena, η², r – pokazują praktyczne znaczenie wyniku
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Za mała próba:</strong><br />
+          N=20 i uogólnianie na całą populację
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Odpowiednia wielkość próby:</strong><br />
+          Min. 30 na grupę, lepiej 50-100. Opisz ograniczenia przy małej próbie
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Usuwanie wartości odstających:</strong><br />
+          Automatyczne usunięcie wszystkich outlierów
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Przemyślana decyzja:</strong><br />
+          Sprawdź przyczynę. Usuń tylko błędy, nie rzeczywiste obserwacje ekstremalne
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Podsumowanie – klucz do dobrej analizy ilościowej</h2>
+
+<p>Analiza danych ilościowych w pracy magisterskiej to proces wymagający systematyczności, znajomości narzędzi statystycznych oraz umiejętności interpretacji wyników. Sukces zależy od trzech kluczowych elementów: starannego przygotowania danych (kodowanie, czyszczenie, weryfikacja), właściwego doboru testów statystycznych (dopasowanych do typu zmiennych i pytań badawczych) oraz rzetelnej interpretacji wyników (z uwzględnieniem wielkości efektu, nie tylko istotności statystycznej).</p>
+
+<p>Pamiętaj, że statystyka to narzędzie, a nie cel sam w sobie. Nawet najbardziej zaawansowane analizy nie zastąpią przemyślanego problemu badawczego i poprawnie zebranych danych. Zanim zaczniesz analizę, upewnij się, że rozumiesz swoje pytania badawcze i wiesz, jakich odpowiedzi szukasz. Dobierz testy statystyczne PRZED zebraniem danych – to pomoże Ci też zaplanować odpowiednią wielkość próby.</p>
+
+<p>Prezentując wyniki w pracy magisterskiej, zawsze podawaj pełne informacje statystyczne: wartość statystyki testowej, stopnie swobody, wartość p oraz miarę wielkości efektu. Ilustruj wyniki przejrzystymi tabelami i wykresami, ale nie powielaj tych samych danych w różnych formatach. Interpretuj wyniki w kontekście teorii i praktyki – co one oznaczają dla Twojego problemu badawczego?</p>
+
+<!-- OZDOBNIK: Checklist -->
+<div class="my-8 bg-gradient-to-br from-primary-50 to-accent-50 border-2 border-primary-300 rounded-xl p-6 shadow-lg">
+  <div class="flex items-start mb-4">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">✅ Checklist: Czy Twoja Analiza Ilościowa Jest Kompletna?</h3>
+      <div class="space-y-3">
+        <p class="font-semibold text-gray-800">Przygotowanie danych:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Stworzyłem książkę kodową opisującą wszystkie zmienne</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Sprawdziłem dane pod kątem błędów i wartości odstających</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Opisałem sposób postępowania z brakami danych</label>
+        </div>
+        
+        <p class="font-semibold text-gray-800 mt-4">Statystyki opisowe:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Przedstawiłem charakterystykę próby (N, płeć, wiek, itp.)</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Podałem średnie, odchylenia standardowe dla zmiennych ilościowych</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Podałem rozkłady częstości dla zmiennych kategorycznych</label>
+        </div>
+        
+        <p class="font-semibold text-gray-800 mt-4">Testowanie hipotez:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Sprawdziłem założenia testów (normalność, homogeniczność wariancji)</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Dobrałem testy odpowiednie do typu zmiennych i pytań badawczych</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Podałem pełne wyniki: statystykę, df, p-value, wielkość efektu</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Zinterpretowałem wyniki w kontekście hipotez badawczych</label>
+        </div>
+        
+        <p class="font-semibold text-gray-800 mt-4">Prezentacja:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Tabele są przejrzyste, z opisami i numeracją</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Wykresy mają tytuły, opisy osi i legendy</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Opisałem ograniczenia metodologiczne badania</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dodatkowe Wskazówki -->
+<div class="mt-12 p-6 bg-gradient-to-r from-accent-50 to-primary-50 rounded-xl border-2 border-accent-100">
+  <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+    <svg class="w-6 h-6 mr-2 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>
+    Dodatkowe Wskazówki
+  </h3>
+  <ul class="space-y-2 text-gray-700">
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>SPSS ma licencję studencką</strong> – sprawdź, czy Twoja uczelnia oferuje darmowy dostęp</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Zapisuj wyniki na bieżąco</strong> – kopiuj output do Worda, bo SPSS nie zapisuje automatycznie</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Używaj kalkulatora wielkości próby</strong> – G*Power pomoże określić ile osób potrzebujesz</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Nie bój się nieistotnych wyników</strong> – brak różnicy to też wynik, wart raportowania i interpretacji</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Skonsultuj analizę z promotorem</strong> – lepiej poprawić podejście wcześniej niż przepisywać rozdział</span>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- KONIEC MIEJSCA NA TREŚĆ -->
+
+  <!-- Next Steps -->
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">Następne kroki</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="/poradnik-pisania/struktura" class="card hover:shadow-lg transition-all border-2 border-transparent hover:border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Struktura Pracy</h4>
+        <p class="text-sm text-gray-600">Poznaj pełną strukturę pracy magisterskiej</p>
+      </a>
+      <a href="/poradnik-pisania/metodologia" class="card hover:shadow-lg transition-all border-2 border-transparent hover:border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Metodologia</h4>
+        <p class="text-sm text-gray-600">Wybierz właściwą metodologię badawczą</p>
+      </a>
+    </div>
+  </div>
+</ArticleLayout>

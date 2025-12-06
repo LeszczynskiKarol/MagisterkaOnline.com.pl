@@ -1,8 +1,20 @@
 ---
 const navItems = [
   { href: '/', label: 'Start' },
-  { href: '/poradnik-pisania-mgr', label: 'Poradnik Pisania' },
-  { href: '/ai-w-pisaniu-prac-mgr', label: 'AI w Pisaniu Prac' },
+  { href: '/metodologia/', label: 'Metodologia' },
+];
+
+// Dropdown items dla "Poradnik"
+const poradnikItems = [
+  { href: '/wybor-tematu/', label: 'Wybór tematu' },
+  { href: '/konspekt/', label: 'Konspekt' },
+  { href: '/cel-pracy-magisterskiej/', label: 'Cel pracy' },
+  { href: '/jak-napisac-wstep/', label: 'Wstęp' },
+  { href: '/bibliografia/', label: 'Bibliografia' },
+  { href: '/cytowanie-i-cytaty/', label: 'Cytowanie' },
+  { href: '/formatowanie/', label: 'Formatowanie' },
+  { href: '/zakonczenie/', label: 'Zakończenie' },
+  { href: '/obrona/', label: 'Obrona' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -22,7 +34,7 @@ const currentPath = Astro.url.pathname;
           <span class="text-lg font-bold text-gray-900 leading-tight group-hover:text-primary-600 transition-colors">
             MagisterkaOnline
           </span>
-          <span class="text-xs text-gray-500">Twoja droga do sukcesu</span>
+          <span class="text-xs text-gray-500 hidden sm:block">Poradnik pisania pracy magisterskiej</span>
         </div>
       </a>
 
@@ -32,7 +44,7 @@ const currentPath = Astro.url.pathname;
           <a
             href={item.href}
             class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              currentPath === item.href || currentPath.startsWith(item.href + '/')
+              currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
                 ? 'bg-primary-50 text-primary-700'
                 : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
             }`}
@@ -40,12 +52,52 @@ const currentPath = Astro.url.pathname;
             {item.label}
           </a>
         ))}
+        
+        <!-- Poradnik Dropdown -->
+        <div class="relative group">
+          <button
+            class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center gap-1 ${
+              poradnikItems.some(item => currentPath.startsWith(item.href))
+                ? 'bg-primary-50 text-primary-700'
+                : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+            }`}
+          >
+            Poradnik
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <!-- Dropdown Menu -->
+          <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            {poradnikItems.map((item) => (
+              <a
+                href={item.href}
+                class={`block px-4 py-2 text-sm transition-colors ${
+                  currentPath.startsWith(item.href)
+                    ? 'bg-primary-50 text-primary-700 font-medium'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+            <div class="border-t border-gray-100 mt-2 pt-2">
+              <a
+                href="/"
+                class="block px-4 py-2 text-sm text-primary-600 hover:bg-primary-50 font-medium"
+              >
+                Zobacz wszystkie →
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- CTA Button -->
       <div class="hidden md:block">
-        <a href="/poradnik-pisania" class="btn-primary">
-          Rozpocznij
+        <a href="/wybor-tematu/" class="btn-primary">
+          Zacznij pisać
         </a>
       </div>
 
@@ -57,8 +109,11 @@ const currentPath = Astro.url.pathname;
         aria-expanded="false"
         aria-label="Toggle menu"
       >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
     </div>
@@ -66,21 +121,50 @@ const currentPath = Astro.url.pathname;
     <!-- Mobile Navigation -->
     <div class="hidden md:hidden pb-4" id="mobile-menu">
       <div class="flex flex-col space-y-1">
-        {navItems.map((item) => (
+        <a
+          href="/"
+          class={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+            currentPath === '/'
+              ? 'bg-primary-50 text-primary-700'
+              : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+          }`}
+        >
+          🏠 Start
+        </a>
+        
+        <a
+          href="/metodologia/"
+          class={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+            currentPath.startsWith('/metodologia')
+              ? 'bg-primary-50 text-primary-700'
+              : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+          }`}
+        >
+          🔬 Metodologia
+        </a>
+
+        <div class="pt-2 pb-1 px-4">
+          <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Poradnik</p>
+        </div>
+        
+        {poradnikItems.map((item) => (
           <a
             href={item.href}
-            class={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-              currentPath === item.href || currentPath.startsWith(item.href + '/')
-                ? 'bg-primary-50 text-primary-700'
-                : 'text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+            class={`px-4 py-2 rounded-lg text-sm transition-colors ${
+              currentPath.startsWith(item.href)
+                ? 'bg-primary-50 text-primary-700 font-medium'
+                : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
             }`}
           >
             {item.label}
           </a>
         ))}
-        <a href="/poradnik-pisania" class="btn-primary mt-2">
-          Rozpocznij
-        </a>
+        
+        <div class="pt-3">
+          <a href="/wybor-tematu/" class="btn-primary w-full justify-center">
+            Zacznij pisać
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -90,10 +174,14 @@ const currentPath = Astro.url.pathname;
   // Mobile menu toggle
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = mobileMenuButton?.querySelector('.menu-icon');
+  const closeIcon = mobileMenuButton?.querySelector('.close-icon');
 
   mobileMenuButton?.addEventListener('click', () => {
     const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
     mobileMenuButton.setAttribute('aria-expanded', String(!isExpanded));
     mobileMenu?.classList.toggle('hidden');
+    menuIcon?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
   });
 </script>
