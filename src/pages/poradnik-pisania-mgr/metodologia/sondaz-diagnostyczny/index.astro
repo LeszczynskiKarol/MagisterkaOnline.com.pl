@@ -1,0 +1,689 @@
+---
+import ArticleLayout from '../../../../layouts/ArticleLayout.astro';
+---
+
+<ArticleLayout
+  title="Sondaż diagnostyczny w pracy magisterskiej - jak stworzyć i zaplanować"
+  description="Kompletny przewodnik po tworzeniu i prowadzeniu sondażu diagnostycznego do pracy magisterskiej. Dowiedz się, jak przeprowadzić profesjonalny wywiad do pracy mgr, który odpowiada akademickim wymaganiom."
+  readingTime="15 min"
+>
+  <!-- 
+    ==========================================
+    MIEJSCE NA WKLEJENIE TREŚCI ARTYKUŁU
+    ==========================================
+    
+    INSTRUKCJA:
+    1. Wklej swoją treść HTML poniżej tego komentarza
+    2. Treść powinna zawierać znaczniki HTML: <h2>, <h3>, <p>, <ul>, <li>, <strong>, itp.
+    3. Nie musisz dodawać div'ów czy klas - formatowanie jest automatyczne
+    4. Możesz używać:
+       - <h2> dla głównych sekcji (będą miały podkreślenie)
+       - <h3> dla podsekcji
+       - <p> dla akapitów
+       - <strong> dla pogrubienia
+       - <ul> i <li> dla list (będą miały niebieskie strzałki)
+       - <blockquote> dla cytatów (niebieskie tło)
+    
+    Przykład:
+    <h2><strong>Tytuł sekcji</strong></h2>
+    <p>Treść akapitu z <strong>pogrubionym tekstem</strong>.</p>
+    <ul>
+      <li>Punkt pierwszy</li>
+      <li>Punkt drugi</li>
+    </ul>
+  -->
+
+  <!-- WKLEJ TREŚĆ TUTAJ -->
+
+<p>Sondaż diagnostyczny stanowi jedną z najczęściej wybieranych metod badawczych w pracach magisterskich, szczególnie w naukach społecznych, pedagogice, zarządzaniu i naukach o zdrowiu. Jego popularność wynika z relatywnej łatwości realizacji oraz możliwości uzyskania wartościowych danych empirycznych w stosunkowo krótkim czasie. Metoda ta pozwala na systematyczne gromadzenie informacji o opiniach, postawach, zachowaniach i preferencjach określonych grup społecznych, umożliwiając jednocześnie analizę statystyczną zebranych danych. W kontekście pracy magisterskiej sondaż diagnostyczny stanowi doskonałe narzędzie do weryfikacji hipotez badawczych oraz odpowiedzi na postawione problemy badawcze, zapewniając solidne podstawy do formułowania wniosków i rekomendacji praktycznych.</p>
+
+<h2>Istota i definicja sondażu diagnostycznego</h2>
+
+<p>Sondaż diagnostyczny definiowany jest jako metoda badawcza polegająca na statystycznym gromadzeniu faktów i informacji dotyczących zjawisk strukturalnych, funkcjonalnych oraz dynamiki ich rozwoju. Metoda ta umożliwia badaczowi poznanie opinii, postaw, poglądów i zachowań wybranej zbiorowości poprzez systematyczne zbieranie danych od reprezentatywnej próby badawczej. W ujęciu metodologicznym sondaż diagnostyczny należy do metod empirycznych, które pozwalają na bezpośredni kontakt z rzeczywistością społeczną i pozyskiwanie danych pierwotnych bezpośrednio od respondentów. Charakterystyczną cechą tej metody jest możliwość badania dużych populacji oraz uzyskiwania danych, które można poddać analizie ilościowej i jakościowej.</p>
+
+<p>W praktyce badawczej sondaż diagnostyczny realizowany jest poprzez zastosowanie konkretnych technik badawczych, wśród których dominują ankieta i wywiad kwestionariuszowy. Metoda ta pozwala na diagnozowanie stanu faktycznego badanych zjawisk, identyfikowanie problemów oraz określanie kierunków zmian. Dzięki standaryzacji narzędzi badawczych możliwe jest porównywanie wyników między różnymi grupami respondentów oraz śledzenie zmian w czasie. Sondaż diagnostyczny umożliwia również weryfikację teorii naukowych poprzez konfrontację założeń teoretycznych z danymi empirycznymi pozyskanymi bezpośrednio od badanej populacji.</p>
+
+<!-- OZDOBNIK 1: Sondaż diagnostyczny w pigułce -->
+<div class="my-8 bg-gradient-to-br from-accent-50 to-primary-50 border-l-4 border-accent-500 rounded-r-xl p-6 shadow-md">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-lg font-bold text-gray-900 mb-3">💡 Sondaż diagnostyczny – co musisz wiedzieć w 60 sekund</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-white/60 rounded-lg p-4 border border-blue-200">
+          <h4 class="font-bold text-blue-700 mb-2">📋 CO TO JEST?</h4>
+          <ul class="space-y-1 text-gray-700 text-sm">
+            <li>• Metoda badania opinii, postaw, zachowań</li>
+            <li>• Zbieranie danych od wielu osób</li>
+            <li>• Standaryzowane narzędzie (ankieta)</li>
+            <li>• Możliwość analizy statystycznej</li>
+          </ul>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4 border border-green-200">
+          <h4 class="font-bold text-green-700 mb-2">✅ KIEDY STOSOWAĆ?</h4>
+          <ul class="space-y-1 text-gray-700 text-sm">
+            <li>• Badanie dużych grup (100+ osób)</li>
+            <li>• Pytania "ile?", "jak często?"</li>
+            <li>• Weryfikacja hipotez statystycznych</li>
+            <li>• Diagnoza stanu, opinii, postaw</li>
+          </ul>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4 border border-purple-200">
+          <h4 class="font-bold text-purple-700 mb-2">🛠️ GŁÓWNE TECHNIKI</h4>
+          <ul class="space-y-1 text-gray-700 text-sm">
+            <li>• <strong>Ankieta</strong> – pisemna, online</li>
+            <li>• <strong>Wywiad</strong> – bezpośredni kontakt</li>
+            <li>• Kwestionariusz standaryzowany</li>
+            <li>• Skale pomiarowe (Likert)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4 bg-amber-50 rounded-lg p-3 border border-amber-200">
+        <p class="text-amber-800 text-sm">
+          <strong>🎯 Dla kogo idealny?</strong> Pedagogika, zarządzanie, socjologia, psychologia, nauki o zdrowiu, marketing – wszędzie, gdzie badasz opinie i postawy dużych grup.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Techniki realizacji sondażu diagnostycznego</h2>
+
+<p>Podstawowymi technikami stosowanymi w ramach sondażu diagnostycznego są ankieta oraz wywiad. Ankieta polega na pisemnym udzielaniu odpowiedzi na pytania zawarte w kwestionariuszu, zazwyczaj przez większą grupę respondentów. Charakteryzuje się wysokim stopniem standaryzacji, co oznacza, że wszyscy badani odpowiadają na identyczne pytania w tej samej kolejności. Ankieta może być realizowana w formie tradycyjnej papierowej, audytoryjnej, pocztowej lub coraz popularniejszej formie elektronicznej. Zaletą tej techniki jest możliwość dotarcia do dużej liczby respondentów przy relatywnie niskich kosztach oraz zapewnienie anonimowości, co sprzyja szczerości odpowiedzi.</p>
+
+<p>Wywiad kwestionariuszowy stanowi drugą kluczową technikę sondażu diagnostycznego i polega na bezpośredniej rozmowie ankietera z respondentem według wcześniej przygotowanego scenariusza. Wywiad może przybierać formę wywiadu standaryzowanego, częściowo standaryzowanego lub swobodnego. W przypadku wywiadu standaryzowanego ankieter zadaje pytania w ściśle określonej kolejności i formie, co zapewnia porównywalność wyników. Wywiad pozwala na głębsze poznanie motywacji i postaw respondentów, umożliwia doprecyzowanie niejasnych odpowiedzi oraz budowanie relacji z badanymi. Technika ta jest szczególnie przydatna w badaniach eksploracyjnych oraz w sytuacjach, gdy temat badań jest złożony lub delikatny.</p>
+
+<!-- TABELA: Porównanie technik sondażu -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Technika</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Forma realizacji</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Zalety</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Wady</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Typowa zwrotność</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Ankieta online (CAWI)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Google Forms, SurveyMonkey, Typeform</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Szybka dystrybucja, niskie koszty, automatyczne zbieranie danych</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Niska zwrotność, wymaga dostępu do internetu</td>
+        <td class="px-6 py-4 text-gray-600 text-sm font-mono">10-30%</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Ankieta audytoryjna</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Bezpośrednio w grupie (klasa, szkolenie)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Wysoka zwrotność, kontrola warunków, szybkość</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Ograniczona do dostępnych grup, wymaga organizacji</td>
+        <td class="px-6 py-4 text-gray-600 text-sm font-mono">80-95%</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Ankieta papierowa</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Rozdawana bezpośrednio lub pocztowo</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Bez wymogu internetu, anonimowość</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Ręczne wprowadzanie danych, koszty druku</td>
+        <td class="px-6 py-4 text-gray-600 text-sm font-mono">30-60%</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Wywiad telefoniczny (CATI)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Rozmowa telefoniczna z ankieterem</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Możliwość doprecyzowania, szeroki zasięg</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Czasochłonny, wymaga przeszkolenia ankieterów</td>
+        <td class="px-6 py-4 text-gray-600 text-sm font-mono">20-40%</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Wywiad bezpośredni (PAPI)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Spotkanie twarzą w twarz z ankieterem</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Najwyższa jakość danych, kontrola, głębia</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Czasochłonny, kosztowny, wpływ ankietera</td>
+        <td class="px-6 py-4 text-gray-600 text-sm font-mono">60-80%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- OZDOBNIK: Którą technikę wybrać -->
+<div class="my-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+  <p class="text-blue-800 text-sm mb-2"><strong>🎯 Którą technikę wybrać do pracy magisterskiej?</strong></p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+    <div>
+      <p class="text-gray-700"><strong>Ankieta online (CAWI)</strong> – gdy:</p>
+      <ul class="text-gray-600 ml-4">
+        <li>• Potrzebujesz dużej próby (200+ osób)</li>
+        <li>• Grupa docelowa ma dostęp do internetu</li>
+        <li>• Masz ograniczony budżet i czas</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-gray-700"><strong>Ankieta audytoryjna</strong> – gdy:</p>
+      <ul class="text-gray-600 ml-4">
+        <li>• Masz dostęp do grup (szkoła, firma)</li>
+        <li>• Zależy Ci na wysokiej zwrotności</li>
+        <li>• Chcesz kontrolować warunki badania</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2>Konstrukcja narzędzi badawczych w sondażu diagnostycznym</h2>
+
+<p>Kluczowym elementem sondażu diagnostycznego jest prawidłowo skonstruowane narzędzie badawcze, którym jest kwestionariusz ankiety lub kwestionariusz wywiadu. Proces konstruowania narzędzia rozpoczyna się od precyzyjnego określenia celów badania oraz operacjonalizacji zmiennych badawczych. Każde pytanie w kwestionariuszu powinno być bezpośrednio powiązane z problemem badawczym i służyć realizacji określonego celu. Struktura kwestionariusza zazwyczaj obejmuje część metryczkową zawierającą pytania o cechy demograficzne respondentów oraz część merytoryczną dotyczącą badanego zagadnienia. Istotne jest zachowanie logicznej kolejności pytań, od ogólnych do szczegółowych, oraz odpowiednie zróżnicowanie typów pytań.</p>
+
+<p>W kwestionariuszu można zastosować różne typy pytań, w tym pytania zamknięte z gotowymi wariantami odpowiedzi, pytania otwarte pozwalające na swobodną wypowiedź respondenta, pytania półotwarte łączące obie formy oraz pytania z kafeterią, czyli zestawem możliwych odpowiedzi. Pytania powinny być formułowane w sposób jasny, zrozumiały i jednoznaczny, unikając sugestywności, podwójnych przeczeń oraz terminologii specjalistycznej niezrozumiałej dla respondentów. Przed właściwym badaniem zaleca się przeprowadzenie badania pilotażowego na niewielkiej grupie osób, co pozwala na wykrycie błędów w konstrukcji narzędzia i wprowadzenie niezbędnych korekt. Dobrze skonstruowany kwestionariusz powinien być zwięzły, nie przekraczać 20-30 pytań i nie zajmować respondentowi więcej niż 15-20 minut.</p>
+
+<!-- OZDOBNIK: Struktura kwestionariusza -->
+<div class="my-8 bg-gradient-to-br from-green-50 to-emerald-50 border-l-4 border-green-500 rounded-r-xl p-6 shadow-md">
+  <div class="flex items-start">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-lg font-bold text-gray-900 mb-3">📋 Optymalna struktura kwestionariusza sondażu</h3>
+      <div class="space-y-3">
+        <div class="bg-white/70 rounded-lg p-4 border-l-4 border-blue-400">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 text-sm">1</span>
+              <div>
+                <p class="font-semibold text-gray-800">WSTĘP I INSTRUKCJA</p>
+                <p class="text-gray-500 text-sm">Cel badania, anonimowość, czas wypełniania, dane kontaktowe badacza</p>
+              </div>
+            </div>
+            <span class="text-gray-400 text-sm">~0,5 strony</span>
+          </div>
+        </div>
+        <div class="bg-white/70 rounded-lg p-4 border-l-4 border-green-400">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 text-sm">2</span>
+              <div>
+                <p class="font-semibold text-gray-800">PYTANIA WPROWADZAJĄCE</p>
+                <p class="text-gray-500 text-sm">Proste, nieinwazyjne pytania budujące zaangażowanie respondenta</p>
+              </div>
+            </div>
+            <span class="text-gray-400 text-sm">2-4 pytania</span>
+          </div>
+        </div>
+        <div class="bg-white/70 rounded-lg p-4 border-l-4 border-yellow-400">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 text-sm">3</span>
+              <div>
+                <p class="font-semibold text-gray-800">CZĘŚĆ MERYTORYCZNA</p>
+                <p class="text-gray-500 text-sm">Kluczowe pytania mierzące zmienne – pogrupowane tematycznie, skale Likerta</p>
+              </div>
+            </div>
+            <span class="text-gray-400 text-sm">15-20 pytań</span>
+          </div>
+        </div>
+        <div class="bg-white/70 rounded-lg p-4 border-l-4 border-purple-400">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 text-sm">4</span>
+              <div>
+                <p class="font-semibold text-gray-800">METRYCZKA</p>
+                <p class="text-gray-500 text-sm">Dane demograficzne: wiek, płeć, wykształcenie, zawód, staż, miejsce zamieszkania</p>
+              </div>
+            </div>
+            <span class="text-gray-400 text-sm">5-8 pytań</span>
+          </div>
+        </div>
+        <div class="bg-white/70 rounded-lg p-4 border-l-4 border-gray-400">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <span class="bg-gray-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 text-sm">5</span>
+              <div>
+                <p class="font-semibold text-gray-800">ZAKOŃCZENIE</p>
+                <p class="text-gray-500 text-sm">Podziękowanie, opcjonalne pytanie otwarte na uwagi</p>
+              </div>
+            </div>
+            <span class="text-gray-400 text-sm">1 pytanie</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 bg-amber-50 rounded-lg p-3 border border-amber-200">
+        <p class="text-amber-800 text-sm">
+          <strong>⏱️ Złota zasada:</strong> 20-30 pytań, 15-20 minut wypełniania. Dłuższe ankiety = więcej porzuceń i mniej przemyślanych odpowiedzi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABELA: Typy pytań -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Typ pytania</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Charakterystyka</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Kiedy stosować</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">Przykład</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Zamknięte jednokrotne</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Wybór jednej odpowiedzi z listy</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Dane demograficzne, preferencje jednoznaczne</td>
+        <td class="px-6 py-4 text-gray-600 text-sm italic">"Jaka jest Twoja płeć?"</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Zamknięte wielokrotne</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Możliwość wyboru kilku opcji</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Źródła informacji, czynniki wpływające</td>
+        <td class="px-6 py-4 text-gray-600 text-sm italic">"Z jakich źródeł czerpiesz wiedzę?"</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Skala Likerta 5-pkt</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Stopień zgody z twierdzeniem</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Postawy, opinie, satysfakcja</td>
+        <td class="px-6 py-4 text-gray-600 text-sm italic">"Zdecydowanie się nie zgadzam → Zdecydowanie się zgadzam"</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Skala ocen (1-10)</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Numeryczna ocena natężenia</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Ocena jakości, satysfakcji, NPS</td>
+        <td class="px-6 py-4 text-gray-600 text-sm italic">"Oceń poziom stresu w pracy (1-10)"</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Półotwarte</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Lista + opcja "inne (jakie?)"</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Gdy lista może być niekompletna</td>
+        <td class="px-6 py-4 text-gray-600 text-sm italic">"Jaki jest powód Twojej wizyty? ... Inne:"</td>
+      </tr>
+      <tr class="hover:bg-gray-50 transition-colors">
+        <td class="px-6 py-4 font-semibold text-gray-900">Otwarte</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Swobodna odpowiedź tekstowa</td>
+        <td class="px-6 py-4 text-gray-600 text-sm">Eksploracja, pogłębienie, sugestie</td>
+        <td class="px-6 py-4 text-gray-600 text-sm italic">"Co poprawiłbyś w organizacji pracy?"</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- OZDOBNIK: Wskazówka o pytaniach otwartych -->
+<div class="my-6 bg-purple-50 border border-purple-200 rounded-lg p-4">
+  <p class="text-purple-800 text-sm">
+    <strong>💡 Pytania otwarte w sondażu:</strong> Ogranicz do 1-2 pytań (opcjonalnych). Zbyt wiele pytań otwartych obniża zwrotność i utrudnia analizę statystyczną. Stosuj jako uzupełnienie, nie jako podstawę badania.
+  </p>
+</div>
+
+<h2>Dobór próby badawczej i realizacja badania</h2>
+
+<p>Prawidłowy dobór próby badawczej ma kluczowe znaczenie dla wiarygodności i możliwości generalizacji wyników badania. W sondażu diagnostycznym najczęściej stosuje się dobór losowy prosty, warstwowy lub systematyczny, który zapewnia reprezentatywność próby w stosunku do populacji generalnej. Wielkość próby zależy od wielu czynników, w tym od wielkości populacji, poziomu ufności i błędu estymacji. W pracach magisterskich zaleca się badanie minimum 100-150 respondentów, choć optymalna liczba wynosi 200-300 osób. Istotne jest również określenie kryteriów włączenia i wyłączenia z badania oraz zapewnienie różnorodności próby pod względem istotnych zmiennych demograficznych.</p>
+
+<p>Realizacja badania sondażowego wymaga starannego zaplanowania i przygotowania organizacyjnego. Należy określić harmonogram badania, sposób dotarcia do respondentów oraz procedury zbierania danych. W przypadku ankiety elektronicznej konieczne jest wybranie odpowiedniej platformy do przeprowadzenia badania oraz zapewnienie łatwego dostępu do kwestionariusza. Przy realizacji wywiadów należy przeszkolić ankieterów w zakresie technik prowadzenia rozmowy oraz zapewnić jednolite standardy postępowania. Ważnym aspektem jest również przestrzeganie zasad etyki badawczej, w tym uzyskanie świadomej zgody respondentów na udział w badaniu, zapewnienie anonimowości i poufności danych oraz poinformowanie o celu badania i sposobie wykorzystania wyników.</p>
+
+<h2>Analiza i interpretacja wyników sondażu diagnostycznego</h2>
+
+<p>Zebrany materiał empiryczny wymaga systematycznej analizy i interpretacji. Proces ten rozpoczyna się od kodowania danych, czyli przypisania wartości liczbowych poszczególnym odpowiedziom, co umożliwia dalszą analizę statystyczną. Dane wprowadza się do programów statystycznych takich jak SPSS, Statistica lub Excel, gdzie poddaje się je analizie opisowej i wnioskowania statystycznego. Analiza opisowa obejmuje obliczenie podstawowych statystyk, takich jak średnia arytmetyczna, mediana, odchylenie standardowe oraz przedstawienie rozkładów odpowiedzi w formie tabel i wykresów. Analiza wnioskowania pozwala na testowanie hipotez badawczych poprzez zastosowanie odpowiednich testów statystycznych, takich jak test chi-kwadrat, test t-Studenta czy analiza wariancji.</p>
+
+<p>Interpretacja wyników wymaga odniesienia uzyskanych danych do przyjętych hipotez badawczych oraz kontekstu teoretycznego pracy. Należy wskazać, które hipotezy zostały potwierdzone, a które odrzucone, oraz wyjaśnić przyczyny uzyskanych rezultatów. Istotne jest również porównanie własnych wyników z wynikami innych badań w danym obszarze oraz wskazanie podobieństw i różnic. W dyskusji należy odnieść się do ograniczeń przeprowadzonego badania, takich jak wielkość próby, sposób doboru respondentów czy możliwe błędy pomiarowe. Wnioski powinny być formułowane ostrożnie, z uwzględnieniem zakresu generalizacji wyników oraz wskazaniem implikacji praktycznych i teoretycznych przeprowadzonego badania.</p>
+
+<h2>Najczęstsze błędy w sondażach diagnostycznych</h2>
+
+<p>Błędy metodologiczne w sondażu mogą całkowicie zdyskwalifikować zebrane dane. Świadomość typowych pułapek pozwala ich uniknąć i przeprowadzić wartościowe badanie.</p>
+
+<!-- TABELA: Najczęstsze błędy -->
+<div class="my-8 overflow-x-auto">
+  <table class="min-w-full bg-white border-2 border-red-200 rounded-lg overflow-hidden">
+    <thead class="bg-gradient-to-r from-red-600 to-red-700 text-white">
+      <tr>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">❌ Błąd</th>
+        <th class="px-6 py-4 text-left text-sm font-bold uppercase tracking-wider">✅ Poprawne Podejście</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Pytanie sugerujące odpowiedź:</strong><br />
+          <span class="text-sm italic">"Czy zgadzasz się, że nasza szkoła dobrze przygotowuje do życia?"</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Neutralne sformułowanie:</strong><br />
+          <span class="text-sm italic">"Jak oceniasz przygotowanie do życia zawodowego przez szkołę?" (skala 1-5)</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Pytanie podwójne (2 w 1):</strong><br />
+          <span class="text-sm italic">"Czy jesteś zadowolony z pensji i atmosfery w pracy?"</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Osobne pytania:</strong><br />
+          <span class="text-sm italic">Rozdziel na dwa pytania: o pensję i o atmosferę</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Za mała próba:</strong><br />
+          <span class="text-sm italic">50 ankiet i wnioski o "wszystkich nauczycielach w Polsce"</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Odpowiednia wielkość próby:</strong><br />
+          <span class="text-sm italic">Min. 100-150 osób, lepiej 200-300. Opisz ograniczenia generalizacji</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Niekompletna kafeteria:</strong><br />
+          <span class="text-sm italic">Brak opcji "nie dotyczy" lub "inne"</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Pełna kafeteria:</strong><br />
+          <span class="text-sm italic">Dodaj "nie dotyczy", "trudno powiedzieć", "inne (jakie?)"</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Brak pilotażu:</strong><br />
+          <span class="text-sm italic">Wysłanie ankiety bez testowania</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Obowiązkowy pilotaż:</strong><br />
+          <span class="text-sm italic">Test na 10-15 osobach, zebranie uwag, korekta przed właściwym badaniem</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Zbyt długa ankieta:</strong><br />
+          <span class="text-sm italic">50 pytań, 40 minut wypełniania</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Optymalna długość:</strong><br />
+          <span class="text-sm italic">20-30 pytań, 15-20 minut. Każde pytanie musi mieć uzasadnienie</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Metryczka na początku:</strong><br />
+          <span class="text-sm italic">Respondent zaczyna od nudnych pytań o wiek, płeć...</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Metryczka na końcu:</strong><br />
+          <span class="text-sm italic">Zaangażowany respondent dokończy ankietę mimo "nudnej" metryczki</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Niereprezentatywna próba:</strong><br />
+          <span class="text-sm italic">Tylko znajomi z Facebooka, tylko studenci jednego kierunku</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Zróżnicowana rekrutacja:</strong><br />
+          <span class="text-sm italic">Różne kanały dotarcia, kontrola struktury demograficznej</span>
+        </td>
+      </tr>
+      <tr class="hover:bg-red-50 transition-colors">
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Brak związku pytań z hipotezami:</strong><br />
+          <span class="text-sm italic">"Ciekawe pytanie" bez uzasadnienia metodologicznego</span>
+        </td>
+        <td class="px-6 py-4 text-gray-700">
+          <strong>Pytanie → Zmienna → Hipoteza:</strong><br />
+          <span class="text-sm italic">Każde pytanie musi służyć weryfikacji hipotezy lub opisaniu próby</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- OZDOBNIK: Ostrzeżenie -->
+<div class="my-6 bg-red-50 border border-red-200 rounded-lg p-4">
+  <p class="text-red-800 text-sm">
+    <strong>⚠️ Błędy w konstrukcji ankiety = bezwartościowe dane!</strong> Żadna analiza statystyczna nie naprawi źle sformułowanych pytań czy niereprezentatywnej próby. Zainwestuj czas w projektowanie i pilotaż – to się zwróci.
+  </p>
+</div>
+
+<h2>Zalety i ograniczenia sondażu diagnostycznego w pracy magisterskiej</h2>
+
+<p>Sondaż diagnostyczny oferuje szereg istotnych zalet, które czynią go atrakcyjną metodą badawczą dla studentów przygotowujących prace magisterskie. Główną zaletą jest możliwość zbadania dużej liczby osób w relatywnie krótkim czasie oraz przy umiarkowanych kosztach. Metoda ta pozwala na uzyskanie danych ilościowych, które można poddać obiektywnej analizie statystycznej i przedstawić w przejrzystej formie tabel i wykresów. Standaryzacja narzędzi badawczych zapewnia porównywalność wyników oraz możliwość replikacji badania. Sondaż diagnostyczny umożliwia również zachowanie anonimowości respondentów, co sprzyja szczerości odpowiedzi, szczególnie w przypadku pytań dotyczących delikatnych tematów. Metoda ta jest stosunkowo łatwa w realizacji i nie wymaga zaawansowanego sprzętu czy specjalistycznych umiejętności.</p>
+
+<p>Należy jednak pamiętać o ograniczeniach tej metody. Sondaż diagnostyczny dostarcza głównie danych powierzchownych i nie pozwala na głębokie poznanie motywacji czy złożonych procesów psychologicznych. Wyniki badania mogą być obciążone błędem wynikającym z nierzetelności respondentów, którzy mogą udzielać odpowiedzi społecznie pożądanych lub wypełniać kwestionariusz mechanicznie bez należytej uwagi. Niska zwrotność ankiet, szczególnie w badaniach pocztowych czy internetowych, może prowadzić do uzyskania niereprezentywnej próby. Konstrukcja pytań wymaga dużej staranności, gdyż źle sformułowane pytania mogą sugerować odpowiedzi lub być niezrozumiałe dla respondentów. Metoda ta nie sprawdza się w badaniu zjawisk rzadkich lub trudno dostępnych populacji, a także w sytuacjach wymagających obserwacji zachowań w naturalnych warunkach.</p>
+
+<h2>Praktyczne wskazówki dla studentów</h2>
+
+<p>Studenci planujący wykorzystanie sondażu diagnostycznego w pracy magisterskiej powinni rozpocząć od dokładnego zapoznania się z literaturą metodologiczną oraz przykładami badań w wybranym obszarze. Kluczowe jest precyzyjne sformułowanie problemu badawczego i hipotez, które będą weryfikowane za pomocą sondażu. Warto skonsultować projekt badania z promotorem przed przystąpieniem do konstrukcji narzędzia. Przy tworzeniu kwestionariusza należy korzystać ze sprawdzonych wzorców i skal pomiarowych, unikając wymyślania pytań od podstaw. Zaleca się przeprowadzenie badania pilotażowego oraz analiz rzetelności i trafności narzędzia. Należy również zaplanować realistyczny harmonogram badania, uwzględniający czas potrzebny na rekrutację respondentów, zbieranie danych oraz ich analizę.</p>
+
+<table>
+<thead>
+<tr>
+<th>Etap badania</th>
+<th>Kluczowe działania</th>
+<th>Czas realizacji</th>
+<th>Potencjalne problemy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Przygotowanie</td>
+<td>Analiza literatury, operacjonalizacja zmiennych, konstrukcja kwestionariusza</td>
+<td>4-6 tygodni</td>
+<td>Błędy w formułowaniu pytań, brak spójności z celami</td>
+</tr>
+<tr>
+<td>Pilotaż</td>
+<td>Test narzędzia na małej grupie, wprowadzenie korekt</td>
+<td>1-2 tygodnie</td>
+<td>Nieczytelne pytania, problemy techniczne</td>
+</tr>
+<tr>
+<td>Rekrutacja</td>
+<td>Dotarcie do respondentów, uzyskanie zgód na udział</td>
+<td>2-3 tygodnie</td>
+<td>Trudności w dostępie do grupy docelowej</td>
+</tr>
+<tr>
+<td>Zbieranie danych</td>
+<td>Dystrybucja ankiet, przeprowadzanie wywiadów</td>
+<td>3-4 tygodnie</td>
+<td>Niska zwrotność, odmowy udziału</td>
+</tr>
+<tr>
+<td>Analiza</td>
+<td>Kodowanie, analiza statystyczna, interpretacja</td>
+<td>3-4 tygodnie</td>
+<td>Braki w danych, trudności w interpretacji</td>
+</tr>
+<tr>
+<td>Raportowanie</td>
+<td>Przygotowanie tabel, wykresów, opisu wyników</td>
+<td>2-3 tygodnie</td>
+<td>Problemy z wizualizacją, błędy w opisie</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Zastosowanie sondażu diagnostycznego na różnych kierunkach</h2>
+
+<p>Sondaż diagnostyczny znajduje szerokie zastosowanie w pracach magisterskich na różnych kierunkach studiów. W naukach o zarządzaniu metoda ta wykorzystywana jest do badania satysfakcji klientów, zaangażowania pracowników, kultury organizacyjnej czy efektywności strategii marketingowych.</p>
+
+<h2>Podsumowanie – jak przeprowadzić skuteczny sondaż diagnostyczny</h2>
+
+<p>Sondaż diagnostyczny to sprawdzona metoda badawcza idealna do prac magisterskich, gdy chcesz zbadać opinie, postawy i zachowania większych grup. Jego główne zalety to możliwość dotarcia do wielu respondentów, standaryzacja pomiaru i możliwość analizy statystycznej. Pamiętaj jednak, że sondaż daje dane "powierzchowne" – jeśli chcesz zrozumieć "dlaczego", rozważ triangulację z metodami jakościowymi.</p>
+
+<p>Kluczem do sukcesu jest staranne przygotowanie: jasno sformułowany problem badawczy, precyzyjnie skonstruowany kwestionariusz i odpowiednio dobrana próba. Nie pomijaj pilotażu – to Twoja ostatnia szansa na wykrycie błędów. Pamiętaj też o realistycznym harmonogramie: rekrutacja 200 respondentów zajmuje tygodnie, nie dni.</p>
+
+<p>Etyka badawcza to fundament: świadoma zgoda, anonimowość i uczciwość w raportowaniu wyników. Nawet najlepsze dane tracą wartość, jeśli zostały zebrane nieetycznie lub zmanipulowane przy analizie.</p>
+
+<!-- OZDOBNIK: Checklist -->
+<div class="my-8 bg-gradient-to-br from-primary-50 to-accent-50 border-2 border-primary-300 rounded-xl p-6 shadow-lg">
+  <div class="flex items-start mb-4">
+    <div class="flex-shrink-0">
+      <svg class="h-8 w-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">✅ Checklist: Czy Twój Sondaż Jest Gotowy?</h3>
+      <div class="space-y-3">
+        <p class="font-semibold text-gray-800">Planowanie:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Problem badawczy i hipotezy są jasno sformułowane</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Zmienne są zoperacjonalizowane (pojęcia → wskaźniki → pytania)</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Grupa docelowa jest precyzyjnie określona</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Wielkość próby jest oszacowana (min. 100-150, optymalnie 200-300)</label>
+        </div>
+        
+        <p class="font-semibold text-gray-800 mt-4">Konstrukcja kwestionariusza:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Każde pytanie jest neutralne (nie sugeruje odpowiedzi)</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Każde pytanie dotyczy tylko jednego zagadnienia</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Kafeterie są kompletne (+ "inne", "nie dotyczy")</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Metryczka jest na końcu kwestionariusza</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Ankieta ma 20-30 pytań, czas wypełniania ≤ 20 min</label>
+        </div>
+        
+        <p class="font-semibold text-gray-800 mt-4">Realizacja:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Przeprowadziłem pilotaż na 10-15 osobach</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Poprawiłem błędy wykryte w pilotażu</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Wstęp zawiera cel, anonimowość, czas, kontakt</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Harmonogram jest realistyczny (z buforem na rekrutację)</label>
+        </div>
+        
+        <p class="font-semibold text-gray-800 mt-4">Analiza:</p>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Wiem, jakich testów statystycznych użyję</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Mam dostęp do oprogramowania (SPSS/Excel/JASP)</label>
+        </div>
+        <div class="flex items-start">
+          <input type="checkbox" class="mt-1 h-5 w-5 text-primary-600 rounded border-gray-300 focus:ring-primary-500" />
+          <label class="ml-3 text-gray-700">Opisuję ograniczenia badania (próba, generalizacja)</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dodatkowe Wskazówki -->
+<div class="mt-12 p-6 bg-gradient-to-r from-accent-50 to-primary-50 rounded-xl border-2 border-accent-100">
+  <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+    <svg class="w-6 h-6 mr-2 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>
+    Dodatkowe Wskazówki
+  </h3>
+  <ul class="space-y-2 text-gray-700">
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Korzystaj ze sprawdzonych skal</strong> – nie wymyślaj koła na nowo. Skale SERVQUAL, JSS, MBI mają potwierdzoną rzetelność i trafność</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Planuj rekrutację wcześnie</strong> – zebranie 200 odpowiedzi zajmuje 3-4 tygodnie, nie 3 dni. Uwzględnij niską zwrotność</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Testuj ankietę na głos</strong> – przeczytaj każde pytanie na głos. Jeśli brzmi niezręcznie, przepisz je</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Dołącz kwestionariusz jako załącznik</strong> – pełna wersja ankiety w aneksie pracy to standard metodologiczny</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="w-5 h-5 mr-2 mt-1 text-accent-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span><strong>Oblicz Alfa Cronbacha</strong> – dla skal wieloitemowych sprawdź rzetelność (α ≥ 0,7 to akceptowalny poziom)</span>
+    </li>
+  </ul>
+</div>
+
+<!-- Narzędzia -->
+<div class="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+  <p class="text-blue-800 text-sm mb-2"><strong>🛠️ Przydatne narzędzia do sondażu diagnostycznego:</strong></p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+    <div>
+      <p class="font-semibold text-gray-700">Tworzenie ankiet:</p>
+      <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">Google Forms (darmowy)</span>
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">Microsoft Forms</span>
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">SurveyMonkey</span>
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">Typeform</span>
+      </div>
+    </div>
+    <div>
+      <p class="font-semibold text-gray-700">Analiza danych:</p>
+      <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">SPSS</span>
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">Statistica</span>
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">JASP (darmowy)</span>
+        <span class="bg-white px-2 py-1 rounded text-xs text-blue-700 border border-blue-200">Excel</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- KONIEC MIEJSCA NA TREŚĆ -->
+
+  <!-- Next Steps -->
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold text-gray-900 mb-6">Następne kroki</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="/poradnik-pisania/struktura" class="card hover:shadow-lg transition-all border-2 border-transparent hover:border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Struktura Pracy</h4>
+        <p class="text-sm text-gray-600">Poznaj pełną strukturę pracy magisterskiej</p>
+      </a>
+      <a href="/poradnik-pisania/metodologia" class="card hover:shadow-lg transition-all border-2 border-transparent hover:border-primary-500">
+        <h4 class="font-bold text-gray-900 mb-2">Metodologia</h4>
+        <p class="text-sm text-gray-600">Wybierz właściwą metodologię badawczą</p>
+      </a>
+    </div>
+  </div>
+</ArticleLayout>
