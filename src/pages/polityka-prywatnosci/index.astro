@@ -1,0 +1,514 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Polityka Prywatności i Cookies"
+  description="Polityka prywatności serwisu MagisterkaOnline.pl - informacje o przetwarzaniu danych osobowych, plikach cookies i Google Consent Mode."
+>
+  <div class="bg-gradient-to-br from-gray-50 to-white">
+    <div class="container-custom py-12 lg:py-16">
+      <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumbs -->
+        <nav class="mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center space-x-2 text-sm text-gray-600">
+            <li>
+              <a href="/" class="hover:text-primary-600 transition-colors"
+                >Start</a
+              >
+            </li>
+            <li>
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path>
+              </svg>
+            </li>
+            <li class="text-gray-900 font-medium">Polityka Prywatności</li>
+          </ol>
+        </nav>
+
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+          Polityka Prywatności i Cookies
+        </h1>
+
+        <p class="text-gray-500 mb-8">Ostatnia aktualizacja: grudzień 2024</p>
+
+        <!-- Quick Actions -->
+        <div
+          class="bg-primary-50 border border-primary-200 rounded-xl p-6 mb-10"
+        >
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+          >
+            <div>
+              <h3 class="font-bold text-primary-900 mb-1">
+                🍪 Zarządzaj swoimi zgodami
+              </h3>
+              <p class="text-sm text-primary-700">
+                Możesz w każdej chwili zmienić swoje preferencje dotyczące
+                cookies.
+              </p>
+            </div>
+            <button
+              onclick="openCookieSettings()"
+              class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors"
+            >
+              Zmień ustawienia cookies
+            </button>
+          </div>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <h2>1. Administrator danych</h2>
+          <p>
+            Administratorem Twoich danych osobowych jest właściciel serwisu
+            MagisterkaOnline.pl. W sprawach związanych z ochroną danych
+            osobowych możesz skontaktować się z nami przez stronę <a
+              href="/kontakt/">kontakt</a
+            >.
+          </p>
+
+          <h2>2. Jakie dane zbieramy?</h2>
+          <p>
+            Serwis MagisterkaOnline.pl może zbierać następujące kategorie
+            danych:
+          </p>
+
+          <h3>2.1. Dane techniczne (automatycznie)</h3>
+          <ul>
+            <li>Adres IP (anonimizowany)</li>
+            <li>Typ i wersja przeglądarki</li>
+            <li>System operacyjny</li>
+            <li>Rozdzielczość ekranu</li>
+            <li>Źródło ruchu (skąd trafiłeś na stronę)</li>
+          </ul>
+
+          <h3>2.2. Dane o aktywności</h3>
+          <ul>
+            <li>Odwiedzane podstrony</li>
+            <li>Czas spędzony na stronie</li>
+            <li>Kliknięcia i interakcje</li>
+            <li>Głębokość przewijania</li>
+          </ul>
+
+          <h2>3. Cele przetwarzania danych</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Cel</th>
+                <th>Podstawa prawna</th>
+                <th>Wymaga zgody?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Działanie strony (cookies niezbędne)</td>
+                <td>Art. 6 ust. 1 lit. f RODO</td>
+                <td>Nie</td>
+              </tr>
+              <tr>
+                <td>Analityka (Google Analytics)</td>
+                <td>Art. 6 ust. 1 lit. a RODO</td>
+                <td><strong>Tak</strong></td>
+              </tr>
+              <tr>
+                <td>Marketing i reklamy</td>
+                <td>Art. 6 ust. 1 lit. a RODO</td>
+                <td><strong>Tak</strong></td>
+              </tr>
+              <tr>
+                <td>Funkcjonalność (preferencje)</td>
+                <td>Art. 6 ust. 1 lit. a RODO</td>
+                <td><strong>Tak</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>4. Pliki Cookies - szczegółowy opis</h2>
+
+          <h3>4.1. Cookies niezbędne (zawsze aktywne)</h3>
+          <p>
+            Konieczne do prawidłowego funkcjonowania strony. Nie wymagają zgody.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Nazwa</th>
+                <th>Cel</th>
+                <th>Wygasa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>cookieConsent</code></td>
+                <td>Zapamiętanie preferencji cookies</td>
+                <td>1 rok</td>
+              </tr>
+              <tr>
+                <td><code>cookieConsentDate</code></td>
+                <td>Data udzielenia zgody</td>
+                <td>1 rok</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>4.2. Cookies analityczne (Google Analytics)</h3>
+          <p>
+            Zbierają anonimowe statystyki o ruchu. <strong
+              >Wymagają Twojej zgody.</strong>
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Nazwa</th>
+                <th>Cel</th>
+                <th>Wygasa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>_ga</code></td>
+                <td>Identyfikator użytkownika GA4</td>
+                <td>2 lata</td>
+              </tr>
+              <tr>
+                <td><code>_ga_WS3XHX6SYH</code></td>
+                <td>Stan sesji GA4</td>
+                <td>2 lata</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>4.3. Cookies marketingowe</h3>
+          <p>
+            Używane do wyświetlania spersonalizowanych reklam. <strong
+              >Wymagają Twojej zgody.</strong>
+          </p>
+          <p>
+            Aktualnie nie używamy cookies marketingowych, ale możemy je
+            wprowadzić w przyszłości (np. Google Ads, Facebook Pixel).
+          </p>
+
+          <h3>4.4. Cookies funkcjonalne</h3>
+          <p>
+            Zapamiętują Twoje preferencje. <strong
+              >Wymagają Twojej zgody.</strong>
+          </p>
+
+          <h2>5. Google Consent Mode v2</h2>
+          <p>
+            Serwis wykorzystuje <strong>Google Consent Mode v2</strong> - zaawansowany
+            mechanizm zarządzania zgodami, który automatycznie dostosowuje działanie
+            usług Google do Twoich preferencji.
+          </p>
+
+          <h3>5.1. Jak to działa?</h3>
+          <ul>
+            <li>
+              <strong>Domyślnie wszystkie zgody są wyłączone</strong> (deny) do momentu
+              Twojej decyzji
+            </li>
+            <li>Po udzieleniu zgody, odpowiednie funkcje są aktywowane</li>
+            <li>Możesz zmienić zgody w dowolnym momencie</li>
+          </ul>
+
+          <h3>5.2. Parametry zgód Google</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Parametr</th>
+                <th>Opis</th>
+                <th>Kontroluje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>analytics_storage</code></td>
+                <td>Cookies analityczne GA4</td>
+                <td>Checkbox "Analityczne"</td>
+              </tr>
+              <tr>
+                <td><code>ad_storage</code></td>
+                <td>Cookies reklamowe</td>
+                <td>Checkbox "Marketingowe"</td>
+              </tr>
+              <tr>
+                <td><code>ad_user_data</code></td>
+                <td>Dane użytkownika dla reklam</td>
+                <td>Checkbox "Marketingowe"</td>
+              </tr>
+              <tr>
+                <td><code>ad_personalization</code></td>
+                <td>Personalizacja reklam</td>
+                <td>Checkbox "Marketingowe"</td>
+              </tr>
+              <tr>
+                <td><code>functionality_storage</code></td>
+                <td>Funkcjonalność strony</td>
+                <td>Checkbox "Funkcjonalne"</td>
+              </tr>
+              <tr>
+                <td><code>personalization_storage</code></td>
+                <td>Personalizacja treści</td>
+                <td>Checkbox "Funkcjonalne"</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>5.3. Co się dzieje bez zgody?</h3>
+          <p>Jeśli nie udzielisz zgody na cookies analityczne:</p>
+          <ul>
+            <li>
+              Google Analytics <strong>nie zapisuje cookies</strong> na Twoim urządzeniu
+            </li>
+            <li>
+              Możemy otrzymywać tylko zagregowane, anonimowe dane modelowane
+            </li>
+            <li>Nie jesteś identyfikowany jako unikalny użytkownik</li>
+          </ul>
+
+          <h2>6. Narzędzia zewnętrzne</h2>
+
+          <h3>6.1. Google Analytics 4</h3>
+          <ul>
+            <li><strong>Dostawca:</strong> Google LLC</li>
+            <li><strong>Identyfikator:</strong> G-WS3XHX6SYH</li>
+            <li><strong>Cel:</strong> Analiza ruchu na stronie</li>
+            <li>
+              <strong>Polityka prywatności:</strong>
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener">policies.google.com/privacy</a>
+            </li>
+          </ul>
+
+          <h3>6.2. Google Tag Manager</h3>
+          <ul>
+            <li><strong>Dostawca:</strong> Google LLC</li>
+            <li><strong>Identyfikator:</strong> GTM-522W47FG</li>
+            <li><strong>Cel:</strong> Zarządzanie tagami i skryptami</li>
+            <li>
+              <strong>Uwaga:</strong> GTM sam w sobie nie zbiera danych - jedynie
+              ładuje inne skrypty
+            </li>
+          </ul>
+
+          <h2>7. Przekazywanie danych poza EOG</h2>
+          <p>
+            W związku z korzystaniem z usług Google, Twoje dane mogą być
+            przekazywane do USA. Google LLC uczestniczy w ramach EU-US Data
+            Privacy Framework, co zapewnia odpowiedni poziom ochrony danych
+            zgodny z RODO.
+          </p>
+
+          <h2>8. Okres przechowywania danych</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Dane</th>
+                <th>Okres</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Preferencje cookies</td>
+                <td>1 rok od udzielenia zgody</td>
+              </tr>
+              <tr>
+                <td>Dane Google Analytics</td>
+                <td>14 miesięcy (domyślne ustawienie GA4)</td>
+              </tr>
+              <tr>
+                <td>Logi serwera</td>
+                <td>14 dni</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>9. Twoje prawa (RODO)</h2>
+          <p>Zgodnie z RODO przysługują Ci następujące prawa:</p>
+          <ul>
+            <li>
+              <strong>Prawo dostępu</strong> - możesz dowiedzieć się, jakie dane
+              przetwarzamy
+            </li>
+            <li>
+              <strong>Prawo do sprostowania</strong> - możesz poprawić nieprawidłowe
+              dane
+            </li>
+            <li>
+              <strong>Prawo do usunięcia</strong> ("prawo do bycia zapomnianym")
+            </li>
+            <li><strong>Prawo do ograniczenia przetwarzania</strong></li>
+            <li><strong>Prawo do przenoszenia danych</strong></li>
+            <li><strong>Prawo do sprzeciwu</strong></li>
+            <li>
+              <strong>Prawo do cofnięcia zgody</strong> - w dowolnym momencie, bez
+              wpływu na zgodność z prawem przetwarzania przed cofnięciem
+            </li>
+            <li>
+              <strong>Prawo do skargi</strong> - do Prezesa UODO (uodo.gov.pl)
+            </li>
+          </ul>
+
+          <h2>10. Jak zmienić lub wycofać zgodę?</h2>
+          <p>Masz kilka możliwości:</p>
+
+          <h3>10.1. Przez nasz baner cookies</h3>
+          <p>
+            Kliknij przycisk poniżej lub link "Ustawienia cookies" w stopce
+            strony:
+          </p>
+          <button
+            onclick="openCookieSettings()"
+            class="inline-flex items-center px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors my-4"
+          >
+            🍪 Zmień ustawienia cookies
+          </button>
+
+          <h3>10.2. Przez ustawienia przeglądarki</h3>
+          <p>Możesz zarządzać cookies w ustawieniach przeglądarki:</p>
+          <ul>
+            <li>
+              <a
+                href="https://support.google.com/chrome/answer/95647"
+                target="_blank"
+                rel="noopener">Google Chrome</a>
+            </li>
+            <li>
+              <a
+                href="https://support.mozilla.org/pl/kb/wzmocniona-ochrona-przed-sledzeniem-firefox-desktop"
+                target="_blank"
+                rel="noopener">Mozilla Firefox</a>
+            </li>
+            <li>
+              <a
+                href="https://support.apple.com/pl-pl/guide/safari/sfri11471/mac"
+                target="_blank"
+                rel="noopener">Safari</a>
+            </li>
+            <li>
+              <a
+                href="https://support.microsoft.com/pl-pl/microsoft-edge/usuwanie-plik%C3%B3w-cookie-w-przegl%C4%85darce-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                target="_blank"
+                rel="noopener">Microsoft Edge</a>
+            </li>
+          </ul>
+
+          <h3>10.3. Opt-out z Google Analytics</h3>
+          <p>
+            Możesz zainstalować <a
+              href="https://tools.google.com/dlpage/gaoptout"
+              target="_blank"
+              rel="noopener">dodatek do przeglądarki Google Analytics Opt-out</a
+            >.
+          </p>
+
+          <h2>11. Bezpieczeństwo danych</h2>
+          <p>Stosujemy odpowiednie środki techniczne i organizacyjne:</p>
+          <ul>
+            <li>Szyfrowanie SSL/TLS (HTTPS)</li>
+            <li>Anonimizacja adresów IP w Google Analytics</li>
+            <li>Regularne aktualizacje oprogramowania</li>
+            <li>Ograniczony dostęp do danych</li>
+          </ul>
+
+          <h2>12. Zmiany polityki prywatności</h2>
+          <p>
+            Zastrzegamy sobie prawo do wprowadzania zmian w niniejszej polityce.
+            O istotnych zmianach poinformujemy poprzez:
+          </p>
+          <ul>
+            <li>Komunikat na stronie</li>
+            <li>
+              Aktualizację daty "Ostatnia aktualizacja" na górze dokumentu
+            </li>
+          </ul>
+
+          <h2>13. Kontakt</h2>
+          <p>
+            W sprawach związanych z ochroną danych osobowych możesz skontaktować
+            się z nami poprzez stronę <a href="/kontakt/">kontakt</a>.
+          </p>
+        </div>
+
+        <!-- Back link -->
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <a
+            href="/"
+            class="inline-flex items-center text-gray-600 hover:text-primary-600 transition-colors"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Wróć do strony głównej
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b border-gray-200;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold text-gray-800 mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply text-gray-700 mb-4 leading-relaxed;
+  }
+
+  .prose ul {
+    @apply mb-4 pl-6 list-disc;
+  }
+
+  .prose li {
+    @apply text-gray-700 mb-2;
+  }
+
+  .prose a {
+    @apply text-primary-600 hover:text-primary-700 underline;
+  }
+
+  .prose code {
+    @apply bg-gray-100 px-2 py-0.5 rounded text-sm font-mono text-gray-800;
+  }
+
+  .prose table {
+    @apply w-full border-collapse mb-6 text-sm;
+  }
+
+  .prose th {
+    @apply bg-gray-100 border border-gray-200 px-4 py-2 text-left font-semibold text-gray-900;
+  }
+
+  .prose td {
+    @apply border border-gray-200 px-4 py-2 text-gray-700;
+  }
+
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+</style>
