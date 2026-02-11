@@ -157,7 +157,7 @@ main() {
     echo "├────────────────────────────────────────┤"
     echo "│ Twoja strona została wdrożona:        │"
     echo "│                                        │"
-    echo "│ 🌐 https://magisterkaonline.com.pl    │"
+    echo "│ 🌐 %https://www.magisterkaonline.com.pl    │"
     echo "│                                        │"
     echo "│ Zmiany powinny być widoczne za:       │"
     echo "│ • 1-2 minuty (większość regionów)     │"
@@ -175,10 +175,10 @@ read -p "Czy otworzyć stronę w przeglądarce? (t/n): " -n 1 -r
 echo ""
 if [[ $REPLY =~ ^[Tt]$ ]]; then
     if command -v xdg-open &> /dev/null; then
-        xdg-open "https://magisterkaonline.com.pl"
+        xdg-open "%https://www.magisterkaonline.com.pl"
     elif command -v open &> /dev/null; then
-        open "https://magisterkaonline.com.pl"
+        open "%https://www.magisterkaonline.com.pl"
     else
-        echo "Otwórz w przeglądarce: https://magisterkaonline.com.pl"
+        echo "Otwórz w przeglądarce: %https://www.magisterkaonline.com.pl"
     fi
 fi
